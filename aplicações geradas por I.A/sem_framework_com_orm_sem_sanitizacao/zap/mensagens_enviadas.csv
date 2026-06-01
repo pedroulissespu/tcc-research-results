@@ -1,0 +1,378 @@
+ID,Requisição de Timestamp,Timestamp de Resposta,Método,URL,Código,Motivo,RTT,Tamanho do Cabeçalho da Resposta,Tamanho do Corpo da Resposta
+1733,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/2546343499658781144,404,Not Found,3,167,34
+1735,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/2138607377979762788,404,Not Found,4,167,37
+1737,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/6402251501402694071,404,Not Found,3,167,38
+1739,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10,404,Not Found,4,167,37
+1740,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,7,159,2
+1741,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome,200,OK,7,159,2
+1742,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1743,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,16,165,93
+1744,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10,404,Not Found,16,167,38
+1745,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000,404,Not Found,17,167,34
+1746,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/12-2,404,Not Found,14,167,34
+1747,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,13,159,2
+1748,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome,200,OK,16,159,2
+1749,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/12-2,404,Not Found,5,167,34
+1750,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/12-2,404,Not Found,15,167,34
+1751,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,12,165,93
+1752,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/20%2F2,404,Not Found,11,167,34
+1753,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome+AND+1%3D1+--+&categoria=categoria,200,OK,11,159,2
+1754,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10,404,Not Found,9,167,38
+1755,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10,404,Not Found,13,167,37
+1756,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome+AND+1%3D1+--+,200,OK,11,159,2
+1757,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/20%2F2,404,Not Found,12,167,34
+1758,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,14,166,105
+1759,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10,404,Not Found,14,167,37
+1760,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome+AND+1%3D2+--+&categoria=categoria,200,OK,14,159,2
+1761,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/12-2,404,Not Found,13,167,34
+1762,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/12-2,404,Not Found,11,167,34
+1763,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome+AND+1%3D2+--+,200,OK,10,159,2
+1764,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,11,167,37
+1765,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,110
+1766,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10+AND+1%3D1+--+,404,Not Found,10,167,34
+1767,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome+OR+1%3D1+--+&categoria=categoria,200,OK,11,159,2
+1768,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/20%2F2,404,Not Found,11,167,34
+1769,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/20%2F2,404,Not Found,11,167,34
+1770,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome+OR+1%3D1+--+,200,OK,12,159,2
+1771,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10+AND+1%3D1+--+,404,Not Found,12,167,34
+1772,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,12,166,115
+1773,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,11,167,34
+1774,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%27+AND+%271%27%3D%271%27+--+&categoria=categoria,200,OK,11,159,2
+1775,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10,404,Not Found,11,167,38
+1776,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10,404,Not Found,11,167,37
+1777,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%27+AND+%271%27%3D%271%27+--+,200,OK,11,159,2
+1778,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,10,167,34
+1779,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,5,167,34
+1780,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,101
+1781,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%27+AND+%271%27%3D%272%27+--+&categoria=categoria,200,OK,11,159,2
+1782,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10+AND+1%3D1+--+,404,Not Found,11,167,34
+1783,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10+AND+1%3D1+--+,404,Not Found,10,167,34
+1784,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,9,167,34
+1785,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%27+AND+%271%27%3D%272%27+--+,200,OK,10,159,2
+1786,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10+AND+1%3D1,404,Not Found,10,167,34
+1787,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,105
+1788,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%27+OR+%271%27%3D%271%27+--+&categoria=categoria,200,OK,10,159,2
+1789,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,11,167,34
+1790,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,11,167,34
+1791,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10+AND+1%3D1,404,Not Found,11,167,34
+1792,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%27+OR+%271%27%3D%271%27+--+,200,OK,11,159,2
+1793,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%27+AND+%271%27%3D%271,404,Not Found,10,167,34
+1794,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,9,166,109
+1795,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,8,167,34
+1796,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%27+AND+%271%27%3D%271,404,Not Found,8,167,34
+1797,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome+UNION+ALL+select+NULL+--+&categoria=categoria,200,OK,10,159,2
+1798,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,10,167,34
+1799,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome+UNION+ALL+select+NULL+--+,200,OK,10,159,2
+1800,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%22+AND+%221%22%3D%221,404,Not Found,10,167,34
+1801,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,119
+1802,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10+AND+1%3D1,404,Not Found,10,167,34
+1803,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%22+AND+%221%22%3D%221,404,Not Found,11,167,34
+1804,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%27+UNION+ALL+select+NULL+--+&categoria=categoria,200,OK,11,159,2
+1805,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10+AND+1%3D1,404,Not Found,10,167,34
+1806,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10+UNION+ALL+select+NULL+--+,404,Not Found,8,167,34
+1807,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%27+UNION+ALL+select+NULL+--+,200,OK,10,159,2
+1808,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,121
+1809,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1810,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%27+AND+%271%27%3D%271,404,Not Found,9,167,34
+1811,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271,404,Not Found,12,167,34
+1812,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%22+UNION+ALL+select+NULL+--+&categoria=categoria,200,OK,11,159,2
+1813,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%27+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1814,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%22+UNION+ALL+select+NULL+--+,200,OK,12,159,2
+1815,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,122
+1816,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%27+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1817,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221,404,Not Found,10,167,34
+1818,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%22+AND+%221%22%3D%221,404,Not Found,11,167,34
+1819,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%22+UNION+ALL+select+NULL+--+,404,Not Found,9,167,34
+1820,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%29+UNION+ALL+select+NULL+--+&categoria=categoria,200,OK,11,159,2
+1821,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%29+UNION+ALL+select+NULL+--+,200,OK,10,159,2
+1822,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10+UNION+ALL+select+NULL+--+,404,Not Found,3,167,34
+1823,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%22+UNION+ALL+select+NULL+--+,404,Not Found,4,167,34
+1824,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,121
+1825,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10+UNION+ALL+select+NULL+--+,404,Not Found,10,167,34
+1826,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%29+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1827,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome%27%29+UNION+ALL+select+NULL+--+&categoria=categoria,200,OK,12,159,2
+1828,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome%27%29+UNION+ALL+select+NULL+--+,200,OK,12,159,2
+1829,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%29+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1830,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,4,167,34
+1831,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%27+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1832,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%27+UNION+ALL+select+NULL+--+,404,Not Found,4,167,34
+1833,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,18,166,122
+1834,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,15,159,2
+1835,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome,200,OK,17,159,2
+1836,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%22+UNION+ALL+select+NULL+--+,404,Not Found,9,167,34
+1837,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1838,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,DELETE,http://localhost:8000/produtos/10,204,No Content,18,167,0
+1839,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%22+UNION+ALL+select+NULL+--+,404,Not Found,17,167,34
+1840,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,17,165,94
+1841,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,17,159,2
+1842,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%29+UNION+ALL+select+NULL+--+,404,Not Found,17,167,34
+1843,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome,200,OK,17,159,2
+1844,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,18,167,37
+1845,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%29+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1846,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,12,165,94
+1847,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,12,159,2
+1848,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1849,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome,200,OK,12,159,2
+1850,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,12,167,37
+1851,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,11,167,34
+1852,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,165,94
+1853,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/10,404,Not Found,11,167,38
+1854,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca+AND+1%3D1+--+?nome=nome,404,Not Found,11,167,34
+1855,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,14,167,37
+1856,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria+AND+1%3D1+--+,200,OK,16,159,2
+1857,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/10,404,Not Found,14,167,37
+1858,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,14,166,106
+1859,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%27+AND+%271%27%3D%271%27+--+?nome=nome,404,Not Found,11,167,34
+1860,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria+AND+1%3D2+--+,200,OK,9,159,2
+1861,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,10,167,37
+1862,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,111
+1863,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%22+AND+%221%22%3D%221%22+--+?nome=nome,404,Not Found,10,167,34
+1864,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1865,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria+OR+1%3D1+--+,200,OK,11,159,2
+1866,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca+AND+1%3D1?nome=nome,404,Not Found,5,167,34
+1867,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,116
+1868,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,11,167,37
+1869,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%27+AND+%271%27%3D%271%27+--+,200,OK,8,159,2
+1870,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%27+AND+%271%27%3D%271?nome=nome,404,Not Found,7,167,34
+1871,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,9,166,102
+1872,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,9,167,37
+1873,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%22+AND+%221%22%3D%221?nome=nome,404,Not Found,8,167,34
+1874,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%27+AND+%271%27%3D%272%27+--+,200,OK,9,159,2
+1875,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,4,167,37
+1876,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca+UNION+ALL+select+NULL+--+?nome=nome,404,Not Found,3,167,34
+1877,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,106
+1878,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%27+OR+%271%27%3D%271%27+--+,200,OK,9,159,2
+1879,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1880,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%27+UNION+ALL+select+NULL+--+?nome=nome,404,Not Found,9,167,34
+1881,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,110
+1882,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria+UNION+ALL+select+NULL+--+,200,OK,10,159,2
+1883,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,11,167,37
+1884,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%22+UNION+ALL+select+NULL+--+?nome=nome,404,Not Found,8,167,34
+1885,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,9,166,120
+1886,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%27+UNION+ALL+select+NULL+--+,200,OK,9,159,2
+1887,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%29+UNION+ALL+select+NULL+--+?nome=nome,404,Not Found,8,167,34
+1888,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,10,167,37
+1889,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,9,166,121
+1890,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%22+UNION+ALL+select+NULL+--+,200,OK,7,159,2
+1891,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca%27%29+UNION+ALL+select+NULL+--+?nome=nome,404,Not Found,7,167,34
+1892,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1893,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%29+UNION+ALL+select+NULL+--+,200,OK,4,159,2
+1894,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,122
+1895,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/usuarios/busca/?nome=nome,200,OK,11,159,2
+1896,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,12,167,37
+1897,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria%27%29+UNION+ALL+select+NULL+--+,200,OK,10,159,2
+1898,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,121
+1899,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,9,167,37
+1900,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,9,159,2
+1901,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,122
+1902,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,10,167,37
+1903,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,12,159,2
+1904,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,165,94
+1905,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,12,167,37
+1906,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,9,159,2
+1907,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,3,167,37
+1908,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,165,94
+1909,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca+AND+1%3D1+--+?nome=nome&categoria=categoria,404,Not Found,8,167,34
+1910,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1911,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,8,165,94
+1912,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%27+AND+%271%27%3D%271%27+--+?nome=nome&categoria=categoria,404,Not Found,8,167,34
+1913,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1914,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%22+AND+%221%22%3D%221%22+--+?nome=nome&categoria=categoria,404,Not Found,3,167,34
+1915,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,14,181,4933
+1916,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,15,167,37
+1917,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca+AND+1%3D1?nome=nome&categoria=categoria,404,Not Found,15,167,34
+1918,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,9,181,4968
+1919,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1920,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%27+AND+%271%27%3D%271?nome=nome&categoria=categoria,404,Not Found,7,167,34
+1921,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,6,181,4983
+1922,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,5,167,37
+1923,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%22+AND+%221%22%3D%221?nome=nome&categoria=categoria,404,Not Found,5,167,34
+1924,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,7,181,4913
+1925,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1926,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca+UNION+ALL+select+NULL+--+?nome=nome&categoria=categoria,404,Not Found,8,167,34
+1927,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,6,181,4943
+1928,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1929,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%27+UNION+ALL+select+NULL+--+?nome=nome&categoria=categoria,404,Not Found,6,167,34
+1930,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,6,181,4953
+1931,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,6,167,37
+1932,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%22+UNION+ALL+select+NULL+--+?nome=nome&categoria=categoria,404,Not Found,7,167,34
+1933,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,5,181,5003
+1934,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,6,167,37
+1935,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%29+UNION+ALL+select+NULL+--+?nome=nome&categoria=categoria,404,Not Found,6,167,34
+1936,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,6,181,5018
+1937,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca%27%29+UNION+ALL+select+NULL+--+?nome=nome&categoria=categoria,404,Not Found,7,167,34
+1938,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1939,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,GET,http://localhost:8000/produtos/busca/?nome=nome&categoria=categoria,200,OK,3,159,2
+1940,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,3,167,37
+1941,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,7,181,5013
+1942,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,5,167,37
+1943,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,5,181,5008
+1944,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,5,167,37
+1945,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,4,167,37
+1946,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,500,Internal Server Error,6,181,5023
+1947,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1948,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,9,165,94
+1949,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1950,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,8,165,94
+1951,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1952,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,6,165,94
+1953,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1954,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,2,167,37
+1955,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,11,166,106
+1956,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1957,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,7,166,111
+1958,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1959,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,7,166,116
+1960,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1961,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,9,166,102
+1962,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1963,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,8,166,106
+1964,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,9,167,37
+1965,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,8,166,110
+1966,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1967,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,8,166,120
+1968,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,9,167,37
+1969,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,8,166,121
+1970,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,9,167,37
+1971,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,10,166,122
+1972,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,11,167,37
+1974,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,13,166,121
+1973,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,12,167,37
+1975,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,17,167,37
+1976,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,22,166,122
+1977,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,7,167,37
+1979,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,19,167,37
+1978,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,POST,http://localhost:8000/produtos,201,Created,22,165,94
+1980,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,8,167,37
+1981,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,3,167,37
+1982,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,5,167,37
+1983,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,2,167,37
+1984,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,3,167,37
+1985,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,3,167,37
+1986,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,4,167,37
+1987,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:46 GMT-03:00 2026,PUT,http://localhost:8000/produtos/10,404,Not Found,3,167,37
+1988,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,1025,167,38
+1989,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,1034,165,61
+1990,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,1037,181,1253
+1991,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/12-2,404,Not Found,11,167,34
+1992,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,7,181,4795
+1993,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/12-2,404,Not Found,6,167,34
+1994,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/20%2F2,404,Not Found,6,167,34
+1995,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,5,181,4819
+1996,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/20%2F2,404,Not Found,6,167,34
+1997,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,6,167,38
+1998,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,3,181,1253
+1999,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4819
+2000,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10+AND+1%3D1+--+,404,Not Found,5,167,34
+2001,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10+AND+1%3D1+--+,404,Not Found,3,167,34
+2002,Mon Jun 01 00:56:46 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/20%2F2,404,Not Found,1036,167,34
+2003,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,3,167,34
+2004,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,6,167,34
+2005,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,11,181,4817
+2006,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10,404,Not Found,10,167,38
+2007,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,10,167,34
+2008,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,9,167,34
+2009,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4833
+2010,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10+AND+1%3D1+--+,404,Not Found,6,167,34
+2011,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10+AND+1%3D1,404,Not Found,6,167,34
+2012,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10+AND+1%3D1,404,Not Found,6,167,34
+2013,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271%27+--+,404,Not Found,4,167,34
+2014,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271,404,Not Found,4,167,34
+2015,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271,404,Not Found,9,167,34
+2016,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,12,181,4839
+2017,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221,404,Not Found,5,167,34
+2018,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221%22+--+,404,Not Found,6,167,34
+2019,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10+AND+1%3D1,404,Not Found,2,167,34
+2020,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221,404,Not Found,2,167,34
+2021,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4811
+2022,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10+UNION+ALL+select+NULL+--+,404,Not Found,7,167,34
+2023,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10+UNION+ALL+select+NULL+--+,404,Not Found,4,167,34
+2024,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%27+AND+%271%27%3D%271,404,Not Found,5,167,34
+2025,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27+UNION+ALL+select+NULL+--+,404,Not Found,3,167,34
+2026,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,7,181,4811
+2027,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27+UNION+ALL+select+NULL+--+,404,Not Found,7,167,34
+2028,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%22+AND+%221%22%3D%221,404,Not Found,7,167,34
+2029,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%22+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2030,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4809
+2031,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2032,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%22+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2033,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%29+UNION+ALL+select+NULL+--+,404,Not Found,5,167,34
+2034,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%27+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2035,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,7,181,4847
+2036,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%29+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2037,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2038,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,2,167,38
+2039,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%22+UNION+ALL+select+NULL+--+,404,Not Found,3,167,34
+2040,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,3,167,34
+2041,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,7,181,4853
+2042,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,8,167,38
+2043,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%29+UNION+ALL+select+NULL+--+,404,Not Found,7,167,34
+2044,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,8,181,1253
+2045,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,8,181,4851
+2046,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,7,167,38
+2047,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10%27%29+UNION+ALL+select+NULL+--+,404,Not Found,6,167,34
+2048,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,4,167,38
+2049,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,DELETE,http://localhost:8000/usuarios/10,404,Not Found,6,167,38
+2050,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,9,181,4849
+2051,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,6,167,38
+2052,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4855
+2053,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,6,167,38
+2054,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,5,181,4795
+2055,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,6,167,38
+2056,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4795
+2057,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,5,167,38
+2058,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,4,181,4795
+2059,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,5,167,38
+2060,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,7,165,73
+2061,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,7,167,38
+2062,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,7,165,78
+2063,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,7,167,38
+2064,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,8,165,83
+2065,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,9,167,38
+2066,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,9,165,69
+2067,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,9,167,38
+2068,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,7,165,73
+2069,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,7,167,38
+2070,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,6,165,77
+2071,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,7,167,38
+2072,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,7,165,87
+2073,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,7,167,38
+2074,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,3,167,38
+2075,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,8,165,88
+2076,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,5,167,38
+2077,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,404,Not Found,3,167,38
+2078,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,10,165,90
+2079,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,200,OK,16,160,73
+2081,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,14,165,89
+2082,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,201,Created,9,165,90
+2083,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,6,181,4736
+2084,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,5,181,4795
+2085,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,9,181,4736
+2086,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,9,181,4795
+2087,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,7,181,4802
+2088,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,9,181,4795
+2089,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,9,181,4816
+2090,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,11,181,4819
+2091,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,10,181,4822
+2092,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,7,181,4819
+2093,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,6,181,4794
+2094,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,8,181,4817
+2095,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,9,181,4806
+2096,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,7,181,4833
+2097,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,8,181,4810
+2098,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,15,181,4839
+2099,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,14,181,4830
+2100,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,8,181,4811
+2101,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,9,181,4836
+2102,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,12,181,4811
+2103,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,13,181,4834
+2104,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,8,181,4809
+2105,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,6,181,4847
+2106,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,11,181,4832
+2107,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,8,181,4853
+2108,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,6,181,4838
+2109,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,5,181,4851
+2110,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,PUT,http://localhost:8000/usuarios/10,500,Internal Server Error,5,181,4736
+2111,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,5,181,4849
+2112,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,4,181,4855
+2113,Mon Jun 01 00:56:47 GMT-03:00 2026,Mon Jun 01 00:56:47 GMT-03:00 2026,POST,http://localhost:8000/usuarios,500,Internal Server Error,5,181,4795

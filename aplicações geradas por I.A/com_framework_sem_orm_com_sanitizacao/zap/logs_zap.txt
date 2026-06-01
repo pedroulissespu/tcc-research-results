@@ -1,0 +1,323 @@
+api-1  | INFO:     Started server process [1]
+api-1  | INFO:     Waiting for application startup.
+api-1  | INFO:     Application startup complete.
+api-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1  | INFO:     172.18.0.1:33740 - "GET /usuarios HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:33740 - "POST /usuarios HTTP/1.1" 201 Created
+api-1  | INFO:     172.18.0.1:33740 - "GET /usuarios/busca/?nome= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:33740 - "GET /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:33740 - "PUT /usuarios/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:33740 - "DELETE /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:33740 - "GET /produtos HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:33740 - "POST /produtos HTTP/1.1" 201 Created
+api-1  | INFO:     172.18.0.1:33740 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:33740 - "GET /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:33740 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:33740 - "DELETE /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53076 - "GET /2663916147144895401 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53076 - "GET /produtos/8345949293016532794 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53076 - "GET /usuarios/3545895719520180665 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53076 - "GET /usuarios/busca/?nome= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "GET / HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53094 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "DELETE /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/12-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53094 - "PUT /produtos/12-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/12-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/13-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "PUT /produtos/20/2 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/20/2 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/20/2 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "POST /produtos HTTP/1.1" 201 Created
+api-1  | INFO:     172.18.0.1:53094 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10%2BAND%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%2BAND%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%2BAND%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53136 - "DELETE /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53076 - "GET /usuarios/busca/?nome= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10%2BAND%2B1%3D2%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /usuarios/12-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "GET /produtos/12-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%27%2BAND%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%27%2BAND%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53136 - "DELETE /usuarios/12-2 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10%2BOR%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/20/2 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/20/2 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%22%2BAND%2B%221%22%3D%221%22%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%22%2BAND%2B%221%22%3D%221%22%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53136 - "DELETE /usuarios/20/2 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53164 - "PUT /usuarios/10%27%2BAND%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%2BAND%2B1%3D1 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53076 - "GET /usuarios/busca/?nome=+AND+1%3D1+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=+AND+1%3D1+--+&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%2BAND%2B1%3D1 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "PUT /usuarios/10%27%2BAND%2B%271%27%3D%272%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%27%2BAND%2B%271%27%3D%271 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%27%2BAND%2B%271%27%3D%271 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "PUT /usuarios/10%27%2BOR%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%22%2BAND%2B%221%22%3D%221 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%22%2BAND%2B%221%22%3D%221 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "GET /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53136 - "DELETE /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53088 - "GET /usuarios/busca/?nome=%27+AND+%271%27%3D%271%27+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53164 - "PUT /usuarios/10%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/10%2BAND%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53076 - "GET /produtos/busca/?nome=%27+AND+%271%27%3D%271%27+--+&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/10%2BAND%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "DELETE /usuarios/10%2BAND%2B1%3D1%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /usuarios/10%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "GET /produtos/10%27%2BAND%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/10%27%2BAND%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "DELETE /usuarios/10%27%2BAND%2B%271%27%3D%271%27%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/10%22%2BAND%2B%221%22%3D%221%22%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53136 - "GET /usuarios/busca/?nome=%27+AND+%271%27%3D%272%27+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53076 - "GET /produtos/busca/?nome=%27+AND+%271%27%3D%272%27+--+&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/10%22%2BAND%2B%221%22%3D%221%22%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "DELETE /usuarios/10%22%2BAND%2B%221%22%3D%221%22%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/10%2BAND%2B1%3D1 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "GET /usuarios/10%2BAND%2B1%3D1 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10%2BAND%2B1%3D1 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/10%27%2BAND%2B%271%27%3D%271 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "PUT /usuarios/10%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /produtos/10%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/10%27%2BAND%2B%271%27%3D%271 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "DELETE /produtos/10%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "DELETE /usuarios/10%27%2BAND%2B%271%27%3D%271 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/10%22%2BAND%2B%221%22%3D%221 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "PUT /usuarios/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/10%22%2BAND%2B%221%22%3D%221 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10%22%2BAND%2B%221%22%3D%221 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "GET /produtos/10%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/10%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "GET /produtos/10%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "DELETE /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53110 - "GET /usuarios/10%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53122 - "GET /produtos/10%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "GET /usuarios/10%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53122 - "GET /produtos/10%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /usuarios/busca/?nome= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53164 - "GET /usuarios/10%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "DELETE /usuarios/10%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53122 - "GET /produtos/10%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53110 - "GET /usuarios/10%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /usuarios/busca/?nome= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53122 - "GET /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53092 - "GET /usuarios/busca%2BAND%2B1%3D1%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /usuarios/busca%27%2BAND%2B%271%27%3D%271%27%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 201 Created
+api-1  | INFO:     172.18.0.1:53164 - "DELETE /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /usuarios/busca%22%2BAND%2B%221%22%3D%221%22%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53110 - "GET /usuarios/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria=+AND+1%3D1+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%2BAND%2B1%3D1?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%27%2BAND%2B%271%27%3D%271?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%22%2BAND%2B%221%22%3D%221?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 201 Created
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria=%27+AND+%271%27%3D%271%27+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53088 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria=%22+AND+%221%22%3D%221%22+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53130 - "GET /usuarios/busca%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53088 - "GET /produtos/busca/?nome=&categoria=+AND+1%3D1 HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /usuarios/busca/?nome= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca/?nome=&categoria=%27+AND+%271%27%3D%271 HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria=%22+AND+%221%22%3D%221 HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria=+UNION+ALL+select+NULL+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria=%27+UNION+ALL+select+NULL+--+ HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria=%22+UNION+ALL+select+NULL+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria=%29+UNION+ALL+select+NULL+--+ HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca/?nome=&categoria=%27%29+UNION+ALL+select+NULL+--+ HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca%2BAND%2B1%3D1%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca%27%2BAND%2B%271%27%3D%271%27%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca%22%2BAND%2B%221%22%3D%221%22%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca%2BAND%2B1%3D1?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca%27%2BAND%2B%271%27%3D%271?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "GET /produtos/busca%22%2BAND%2B%221%22%3D%221?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca%27%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca%22%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca%27%29%2BUNION%2BALL%2Bselect%2BNULL%2B--%2B?nome=&categoria= HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53092 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "GET /produtos/busca/?nome=&categoria= HTTP/1.1" 200 OK
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53148 - "PUT /produtos/10 HTTP/1.1" 404 Not Found
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 422 Unprocessable Entity
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53094 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /usuarios HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error
+api-1  | INFO:     172.18.0.1:53130 - "POST /produtos HTTP/1.1" 500 Internal Server Error

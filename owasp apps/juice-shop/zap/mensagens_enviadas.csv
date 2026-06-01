@@ -1,0 +1,146 @@
+ID,Requisição de Timestamp,Timestamp de Resposta,Método,URL,Código,Motivo,RTT,Tamanho do Cabeçalho da Resposta,Tamanho do Corpo da Resposta
+4964,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/8745141715535727046,200,OK,11,467,9936
+4965,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/212371884240327292,200,OK,9,467,9936
+4967,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/api/8189820335282475574,500,Internal Server Error,3,356,3030
+4969,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/api/Products/6736050197300747871,404,Not Found,38,391,35
+4971,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/rest/5826959725034597038,500,Internal Server Error,3,356,3032
+4973,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/rest/product/1272179093573853748,500,Internal Server Error,7,356,3048
+4975,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:55 GMT-03:00 2026,GET,http://localhost:3000/rest/user/7529677957219978097,500,Internal Server Error,6,356,3042
+4977,Mon Jun 01 01:20:55 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/stores/723294405740492427,200,OK,9,467,9936
+4978,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/stores/1460268107380543434,200,OK,8,467,9936
+4980,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/users/218909050452197663,200,OK,11,467,9936
+4981,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/users/6032716625547986607,200,OK,9,467,9936
+4983,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2,500,Internal Server Error,6,356,3028
+4984,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2,200,OK,35,467,9936
+4985,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2,500,Internal Server Error,31,356,3028
+4986,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000,200,OK,36,467,9936
+4987,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2,200,OK,47,467,9936
+4988,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2+AND+1%3D1+--+,500,Internal Server Error,18,356,3056
+4989,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/api,500,Internal Server Error,18,356,2990
+4990,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2,200,OK,36,467,9936
+4991,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2,200,OK,64,467,9936
+4992,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2+AND+1%3D2+--+,500,Internal Server Error,19,356,3056
+4993,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2,200,OK,36,467,9936
+4994,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2+OR+1%3D1+--+,500,Internal Server Error,31,356,3054
+4995,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2,200,OK,41,467,9936
+4996,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2+AND+1%3D1+--+,200,OK,42,467,9936
+4997,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%27+AND+%271%27%3D%271%27+--+,500,Internal Server Error,19,356,3086
+4998,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2+AND+1%3D1+--+,200,OK,40,467,9936
+4999,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%27+AND+%271%27%3D%272%27+--+,500,Internal Server Error,7,356,3086
+5000,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2+AND+1%3D1+--+,200,OK,27,467,9936
+5001,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2+AND+1%3D2+--+,200,OK,26,467,9936
+5002,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%27+OR+%271%27%3D%271%27+--+,500,Internal Server Error,24,356,3084
+5003,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2+AND+1%3D2+--+,200,OK,35,467,9936
+5004,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2+UNION+ALL+select+NULL+--+,500,Internal Server Error,9,356,3080
+5005,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2+AND+1%3D2+--+,200,OK,34,467,9936
+5006,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2+OR+1%3D1+--+,200,OK,34,467,9936
+5007,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%27+UNION+ALL+select+NULL+--+,500,Internal Server Error,22,356,3086
+5008,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2+OR+1%3D1+--+,200,OK,33,467,9936
+5009,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%22+UNION+ALL+select+NULL+--+,500,Internal Server Error,9,356,3086
+5010,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2+OR+1%3D1+--+,200,OK,32,467,9936
+5011,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%27+AND+%271%27%3D%271%27+--+,200,OK,33,467,9936
+5012,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%29+UNION+ALL+select+NULL+--+,500,Internal Server Error,21,356,3086
+5013,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%27+AND+%271%27%3D%271%27+--+,200,OK,30,467,9936
+5014,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2%27%29+UNION+ALL+select+NULL+--+,500,Internal Server Error,7,356,3092
+5015,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%27+AND+%271%27%3D%271%27+--+,200,OK,30,467,9936
+5016,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%27+AND+%271%27%3D%272%27+--+,200,OK,29,467,9936
+5017,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Feedbacks?size=1.2,500,Internal Server Error,22,356,3028
+5018,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%27+AND+%271%27%3D%272%27+--+,200,OK,31,467,9936
+5019,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%27+AND+%271%27%3D%272%27+--+,200,OK,24,467,9936
+5020,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%27+OR+%271%27%3D%271%27+--+,200,OK,24,467,9936
+5021,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%27+OR+%271%27%3D%271%27+--+,200,OK,17,467,9936
+5022,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%27+OR+%271%27%3D%271%27+--+,200,OK,16,467,9936
+5023,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2+UNION+ALL+select+NULL+--+,200,OK,17,467,9936
+5024,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2+UNION+ALL+select+NULL+--+,200,OK,16,467,9936
+5025,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2+UNION+ALL+select+NULL+--+,200,OK,17,467,9936
+5026,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%27+UNION+ALL+select+NULL+--+,200,OK,13,467,9936
+5027,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%27+UNION+ALL+select+NULL+--+,200,OK,20,467,9936
+5028,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%27+UNION+ALL+select+NULL+--+,200,OK,20,467,9936
+5029,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%22+UNION+ALL+select+NULL+--+,200,OK,20,467,9936
+5030,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%22+UNION+ALL+select+NULL+--+,200,OK,18,467,9936
+5031,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%22+UNION+ALL+select+NULL+--+,200,OK,19,467,9936
+5032,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%29+UNION+ALL+select+NULL+--+,200,OK,18,467,9936
+5033,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%29+UNION+ALL+select+NULL+--+,200,OK,28,467,9936
+5034,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%29+UNION+ALL+select+NULL+--+,200,OK,29,467,9936
+5035,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2%27%29+UNION+ALL+select+NULL+--+,200,OK,30,467,9936
+5036,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2%27%29+UNION+ALL+select+NULL+--+,200,OK,20,467,9936
+5037,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2%27%29+UNION+ALL+select+NULL+--+,200,OK,20,467,9936
+5038,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/stores/order?size=1.2,200,OK,20,467,9936
+5039,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users?size=1.2,200,OK,21,467,9936
+5040,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/users/createWithArray?size=1.2,200,OK,21,467,9936
+5041,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2,401,Unauthorized,449,387,26
+5042,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2,401,Unauthorized,301,387,26
+5043,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2,200,OK,931,386,257
+5044,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2,200,OK,870,387,1734
+5045,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/api/Products,200,OK,871,389,16011
+5046,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2+AND+1%3D1+--+,401,Unauthorized,191,387,26
+5047,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/rest,500,Internal Server Error,16,356,2992
+5048,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:56 GMT-03:00 2026,GET,http://localhost:3000/rest/product,500,Internal Server Error,8,356,3008
+5049,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user,500,Internal Server Error,4,356,3002
+5050,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2,500,Internal Server Error,7,356,3034
+5051,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2,200,OK,7,383,11
+5052,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2,200,OK,9,383,11
+5053,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2,500,Internal Server Error,19,356,3034
+5054,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/stores,200,OK,24,467,9936
+5055,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2+AND+1%3D1+--+,200,OK,8,383,11
+5056,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2+AND+1%3D2+--+,200,OK,4,383,11
+5057,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2+AND+1%3D1+--+,500,Internal Server Error,21,356,3062
+5058,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2+OR+1%3D1+--+,200,OK,18,383,11
+5059,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/users,200,OK,31,467,9936
+5060,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%27+AND+%271%27%3D%271%27+--+,200,OK,8,383,11
+5061,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2+AND+1%3D2+--+,500,Internal Server Error,17,356,3062
+5062,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%27+AND+%271%27%3D%272%27+--+,200,OK,11,383,11
+5063,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2+OR+1%3D1+--+,500,Internal Server Error,11,356,3060
+5064,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%27+OR+%271%27%3D%271%27+--+,200,OK,7,383,11
+5065,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2+UNION+ALL+select+NULL+--+,200,OK,3,383,11
+5066,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%27+AND+%271%27%3D%271%27+--+,500,Internal Server Error,10,356,3092
+5067,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%27+UNION+ALL+select+NULL+--+,200,OK,6,383,11
+5068,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%22+UNION+ALL+select+NULL+--+,200,OK,9,383,11
+5069,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%27+AND+%271%27%3D%272%27+--+,500,Internal Server Error,17,356,3092
+5070,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%29+UNION+ALL+select+NULL+--+,200,OK,8,383,11
+5071,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2%27%29+UNION+ALL+select+NULL+--+,200,OK,4,383,11
+5072,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%27+OR+%271%27%3D%271%27+--+,500,Internal Server Error,11,356,3090
+5073,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/user/whoami?size=1.2,200,OK,7,383,11
+5074,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2+UNION+ALL+select+NULL+--+,500,Internal Server Error,7,356,3086
+5075,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%27+UNION+ALL+select+NULL+--+,500,Internal Server Error,4,356,3092
+5076,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%22+UNION+ALL+select+NULL+--+,500,Internal Server Error,4,356,3092
+5077,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%29+UNION+ALL+select+NULL+--+,500,Internal Server Error,3,356,3092
+5078,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2%27%29+UNION+ALL+select+NULL+--+,500,Internal Server Error,3,356,3098
+5079,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/rest/product/search?q=1.2,500,Internal Server Error,6,356,3034
+5080,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2+AND+1%3D2+--+,401,Unauthorized,195,387,26
+5081,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2,200,OK,355,386,257
+5082,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2+OR+1%3D1+--+,401,Unauthorized,150,387,26
+5083,Mon Jun 01 01:20:56 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2,200,OK,414,387,1734
+5084,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%27+AND+%271%27%3D%271%27+--+,401,Unauthorized,90,387,26
+5085,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2+AND+1%3D1+--+,200,OK,108,386,257
+5086,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%27+AND+%271%27%3D%272%27+--+,401,Unauthorized,34,387,26
+5087,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2+AND+1%3D1+--+,200,OK,89,387,1734
+5088,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2+AND+1%3D2+--+,200,OK,39,386,257
+5089,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%27+OR+%271%27%3D%271%27+--+,401,Unauthorized,23,387,26
+5090,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2+OR+1%3D1+--+,200,OK,31,386,257
+5091,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2+UNION+ALL+select+NULL+--+,401,Unauthorized,30,387,26
+5092,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%27+UNION+ALL+select+NULL+--+,401,Unauthorized,27,387,26
+5093,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2+AND+1%3D2+--+,200,OK,78,387,1734
+5094,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%27+AND+%271%27%3D%271%27+--+,200,OK,47,386,257
+5095,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%22+UNION+ALL+select+NULL+--+,401,Unauthorized,19,387,26
+5096,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%27+AND+%271%27%3D%272%27+--+,200,OK,29,386,257
+5097,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%29+UNION+ALL+select+NULL+--+,401,Unauthorized,28,387,26
+5098,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2+OR+1%3D1+--+,200,OK,54,387,1734
+5099,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2%27%29+UNION+ALL+select+NULL+--+,401,Unauthorized,39,387,26
+5100,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%27+OR+%271%27%3D%271%27+--+,200,OK,63,386,257
+5101,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,POST,http://localhost:3000/rest/user/login?size=1.2,401,Unauthorized,24,387,26
+5102,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%27+AND+%271%27%3D%271%27+--+,200,OK,59,387,1734
+5103,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2+UNION+ALL+select+NULL+--+,200,OK,38,386,257
+5104,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%27+AND+%271%27%3D%272%27+--+,200,OK,45,387,1734
+5105,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%27+UNION+ALL+select+NULL+--+,200,OK,27,386,257
+5106,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%27+OR+%271%27%3D%271%27+--+,200,OK,23,387,1734
+5107,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%22+UNION+ALL+select+NULL+--+,200,OK,23,386,257
+5108,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2+UNION+ALL+select+NULL+--+,200,OK,24,387,1734
+5109,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%29+UNION+ALL+select+NULL+--+,200,OK,24,386,257
+5110,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%27+UNION+ALL+select+NULL+--+,200,OK,23,387,1734
+5111,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2%27%29+UNION+ALL+select+NULL+--+,200,OK,24,386,257
+5112,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%22+UNION+ALL+select+NULL+--+,200,OK,23,387,1734
+5113,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,PUT,http://localhost:3000/api/Products/1?size=1.2,200,OK,23,386,257
+5114,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%29+UNION+ALL+select+NULL+--+,200,OK,15,387,1734
+5115,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2%27%29+UNION+ALL+select+NULL+--+,200,OK,17,387,1734
+5116,Mon Jun 01 01:20:57 GMT-03:00 2026,Mon Jun 01 01:20:57 GMT-03:00 2026,GET,http://localhost:3000/api/Feedbacks?size=1.2,200,OK,13,387,1734

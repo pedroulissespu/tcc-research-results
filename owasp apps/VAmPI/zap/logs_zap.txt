@@ -1,0 +1,934 @@
+vampi-vulnerable  |  * Serving Flask app 'config'
+vampi-secure      |  * Serving Flask app 'config'
+vampi-vulnerable  |  * Debug mode: on
+vampi-vulnerable  | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+vampi-vulnerable  |  * Running on all addresses (0.0.0.0)
+vampi-secure      |  * Debug mode: on
+vampi-vulnerable  |  * Running on http://127.0.0.1:5000
+vampi-secure      | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+vampi-secure      |  * Running on all addresses (0.0.0.0)
+vampi-vulnerable  |  * Running on http://172.18.0.3:5000
+vampi-secure      |  * Running on http://127.0.0.1:5000
+vampi-vulnerable  | [33mPress CTRL+C to quit[0m
+vampi-secure      |  * Running on http://172.18.0.2:5000
+vampi-vulnerable  |  * Restarting with stat
+vampi-secure      | [33mPress CTRL+C to quit[0m
+vampi-secure      |  * Restarting with stat
+vampi-vulnerable  |  * Debugger is active!
+vampi-vulnerable  |  * Debugger PIN: 971-506-765
+vampi-secure      |  * Debugger is active!
+vampi-secure      |  * Debugger PIN: 342-466-017
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "GET / HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[35m[1mGET /books/v1 HTTP/1.1[0m" 500 -
+vampi-secure      | Traceback (most recent call last):
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "GET / HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[35m[1mGET /books/v1 HTTP/1.1[0m" 500 -
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-secure      |     self.dialect.do_execute(
+vampi-vulnerable  | sqlite3.OperationalError: no such table: books
+vampi-vulnerable  | 
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-secure      |     cursor.execute(statement, parameters)
+vampi-vulnerable  | The above exception was the direct cause of the following exception:
+vampi-vulnerable  | 
+vampi-secure      | sqlite3.OperationalError: no such table: books
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-secure      | 
+vampi-secure      | The above exception was the direct cause of the following exception:
+vampi-secure      | 
+vampi-secure      | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+vampi-secure      |     return self.wsgi_app(environ, start_response)
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+vampi-secure      |     response = self.handle_exception(e)
+vampi-vulnerable  |     return self.wsgi_app(environ, start_response)
+vampi-secure      |                ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+vampi-secure      |     response = self.full_dispatch_request()
+vampi-secure      |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+vampi-secure      |     rv = self.handle_user_exception(e)
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+vampi-vulnerable  |     response = self.handle_exception(e)
+vampi-secure      |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+vampi-secure      |     rv = self.dispatch_request()
+vampi-secure      |          ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+vampi-vulnerable  |     response = self.full_dispatch_request()
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+vampi-secure      |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+vampi-vulnerable  |     rv = self.handle_user_exception(e)
+vampi-secure      |     response = function(request)
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |                ^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+vampi-secure      |     response = function(request)
+vampi-secure      |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+vampi-vulnerable  |     rv = self.dispatch_request()
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |     return function(**kwargs)
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+vampi-secure      |   File "/vampi/api_views/books.py", line 13, in get_all_books
+vampi-secure      |     return_value = jsonify({'Books': Book.get_all_books()})
+vampi-secure      |                                      ^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/vampi/models/books_model.py", line 28, in get_all_books
+vampi-secure      |     return [Book.json(user) for user in Book.query.all()]
+vampi-secure      |                                         ^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2712, in all
+vampi-secure      |     return self._iter().all()  # type: ignore
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2872, in _iter
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |     result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+vampi-secure      |                                                   ^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-secure      |     return self._execute_internal(
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2124, in _execute_internal
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-secure      |     result: Result[Any] = compile_state_cls.orm_execute_statement(
+vampi-secure      |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 252, in orm_execute_statement
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+vampi-vulnerable  |     return function(**kwargs)
+vampi-secure      |     result = conn.execute(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^
+vampi-secure      |              ^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/api_views/books.py", line 13, in get_all_books
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+vampi-secure      |     return meth(
+vampi-secure      |            ^^^^^
+vampi-vulnerable  |     return_value = jsonify({'Books': Book.get_all_books()})
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+vampi-vulnerable  |                                      ^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |     return connection._execute_clauseelement(
+vampi-vulnerable  |   File "/vampi/models/books_model.py", line 28, in get_all_books
+vampi-vulnerable  |     return [Book.json(user) for user in Book.query.all()]
+vampi-vulnerable  |                                         ^^^^^^^^^^^^^^^^^
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2712, in all
+vampi-vulnerable  |     return self._iter().all()  # type: ignore
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2872, in _iter
+vampi-vulnerable  |     result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+vampi-vulnerable  |                                                   ^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+vampi-secure      |     ret = self._execute_context(
+vampi-secure      |           ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |     return self._execute_internal(
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2124, in _execute_internal
+vampi-vulnerable  |     result: Result[Any] = compile_state_cls.orm_execute_statement(
+vampi-vulnerable  |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 252, in orm_execute_statement
+vampi-secure      |     return self._exec_single_context(
+vampi-vulnerable  |     result = conn.execute(
+vampi-secure      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |              ^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+vampi-vulnerable  |     return meth(
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+vampi-vulnerable  |            ^^^^^
+vampi-secure      |     self._handle_dbapi_exception(
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+vampi-secure      |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+vampi-vulnerable  |     return connection._execute_clauseelement(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-secure      |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+vampi-vulnerable  |     ret = self._execute_context(
+vampi-vulnerable  |           ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+vampi-vulnerable  |     return self._exec_single_context(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+vampi-secure      |     cursor.execute(statement, parameters)
+vampi-vulnerable  |     self._handle_dbapi_exception(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+vampi-secure      | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: books
+vampi-vulnerable  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+vampi-secure      | [SQL: SELECT books.id AS books_id, books.book_title AS books_book_title, books.secret_content AS books_secret_content, books.user_id AS books_user_id 
+vampi-secure      | FROM books]
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: books
+vampi-secure      | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+vampi-vulnerable  | [SQL: SELECT books.id AS books_id, books.book_title AS books_book_title, books.secret_content AS books_secret_content, books.user_id AS books_user_id 
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | FROM books]
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "GET /createdb HTTP/1.1" 200 -
+vampi-vulnerable  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[31m[1mGET /me HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "GET /users/v1 HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "GET /users/v1/_debug HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "GET /createdb HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[31m[1mGET /me HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "GET /users/v1 HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "GET /users/v1/_debug HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:39] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /705985696059009735 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:19] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /7865196777248111715 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /books/155493823654377799 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mGET /books/v1/2821268071219746793 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /books/5471118658568905793 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /users/5374797408783953086 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /users/v1/3058750203354200713 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /users/v1/name1/8051879540193105473 HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/2779882226521832505 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/1383706314212001332 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "GET / HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/194160432596406470 HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1/8890210236142933017 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "GET / HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /books HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /books HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[33mGET /users HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1+AND+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+AND+1%3D1+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+AND+1%3D1+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1+AND+1%3D1+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mDELETE /users/v1/name1+AND+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1+AND+1%3D1+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+AND+1%3D2+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1+AND+1%3D2+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1+AND+1%3D2+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+AND+1%3D2+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mDELETE /users/v1/name1+AND+1%3D2+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1+AND+1%3D2+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mGET /books/v1/bookTitle77+AND+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1+OR+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+OR+1%3D1+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+OR+1%3D1+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1+OR+1%3D1+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77+AND+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mDELETE /users/v1/name1+OR+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1+OR+1%3D1+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1'+AND+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'1'+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mGET /books/v1/bookTitle77+AND+1%3D2+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'1'+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'1'+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:29] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1'+AND+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'1'+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77+AND+1%3D2+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1+AND+1%3D1+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77+OR+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1'+AND+'1'%3D'2'+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'2'+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'2'+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'2'+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1'+AND+'1'%3D'2'+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77+OR+1%3D1+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1+AND+1%3D1+--+ HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+AND+'1'%3D'2'+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+OR+'1'%3D'1'+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1'+AND+'1'%3D'1'+--+ HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1'+OR+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+OR+'1'%3D'1'+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77'+AND+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1%22+AND+%221%22%3D%221%22+--+ HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77'+AND+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+OR+'1'%3D'1'+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1'+OR+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77'+AND+'1'%3D'2'+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+OR+'1'%3D'1'+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1+AND+1%3D1 HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1'+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1'+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77'+OR+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1%22+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1%22+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1%22+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77'+AND+'1'%3D'2'+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1'+AND+'1'%3D'1 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1'+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1)+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1)+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1)+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77'+OR+'1'%3D'1'+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1'+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1%22+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[33mGET /users/v1/name1%22+AND+%221%22%3D%221 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mGET /books/v1/bookTitle77'+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1%22+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1%22+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1)+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mPUT /users/v1/name1')+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:46] "[31m[1mDELETE /users/v1/name1')+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1')+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1)+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77'+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1)+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1')+UNION+ALL+select+NULL+--+/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[33mGET /users/v1/name1+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1')+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mGET /books/v1/bookTitle77%22+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77%22+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[35m[1mGET /users/v1/name1'+AND+'1'%3D'1'+--+ HTTP/1.1[0m" 500 -
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | sqlite3.OperationalError: near "AND": syntax error
+vampi-vulnerable  | 
+vampi-vulnerable  | The above exception was the direct cause of the following exception:
+vampi-vulnerable  | 
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+vampi-vulnerable  |     return self.wsgi_app(environ, start_response)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |     response = self.handle_exception(e)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mGET /books/v1/bookTitle77)+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[33mGET /users/v1/name1'+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  |     response = self.full_dispatch_request()
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+vampi-vulnerable  |     rv = self.handle_user_exception(e)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |     rv = self.dispatch_request()
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+vampi-vulnerable  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mGET /books/v1/bookTitle77')+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[33mGET /users/v1/name1%22+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  |     response = function(request)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |     response = function(request)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |     return function(request)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+vampi-vulnerable  |     return function(**kwargs)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+vampi-vulnerable  |     if User.get_user(username):
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/models/user_model.py", line 73, in get_user
+vampi-vulnerable  |     query = db.session.execute(text(user_query))
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[33mGET /users/v1/name1)+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[33mGET /users/v1/name1')+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |     return self._proxied.execute(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |     return self._execute_internal(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+vampi-vulnerable  |     result = conn.execute(
+vampi-vulnerable  |              ^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+vampi-vulnerable  |     return meth(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  |            ^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |     return connection._execute_clauseelement(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |     ret = self._execute_context(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  |           ^^^^^^^^^^^^^^^^^^^^^^
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+vampi-vulnerable  |     return self._exec_single_context(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  |     self._handle_dbapi_exception(
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near "AND": syntax error
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | [SQL: SELECT * FROM users WHERE username = 'name1'+AND+'1'='1'+--+']
+vampi-vulnerable  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1')+UNION+ALL+select+NULL+--+/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77)+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1%22+AND+%221%22%3D%221%22+--+ HTTP/1.1[0m" 404 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77')+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1+AND+1%3D1 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mGET /books/v1/bookTitle77 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-secure      | 172.18.0.1 - - [01/Jun/2026 04:22:47] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[35m[1mGET /users/v1/name1'+AND+'1'%3D'1 HTTP/1.1[0m" 500 -
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlite3.OperationalError: near "AND": syntax error
+vampi-vulnerable  | 
+vampi-vulnerable  | The above exception was the direct cause of the following exception:
+vampi-vulnerable  | 
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+vampi-vulnerable  |     return self.wsgi_app(environ, start_response)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+vampi-vulnerable  |     response = self.handle_exception(e)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+vampi-vulnerable  |     response = self.full_dispatch_request()
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+vampi-vulnerable  |     rv = self.handle_user_exception(e)
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+vampi-vulnerable  |     rv = self.dispatch_request()
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+vampi-vulnerable  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+vampi-vulnerable  |     return function(request)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+vampi-vulnerable  |     return function(**kwargs)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+vampi-vulnerable  |     if User.get_user(username):
+vampi-vulnerable  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/models/user_model.py", line 73, in get_user
+vampi-vulnerable  |     query = db.session.execute(text(user_query))
+vampi-vulnerable  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+vampi-vulnerable  |     return self._proxied.execute(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+vampi-vulnerable  |     return self._execute_internal(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+vampi-vulnerable  |     result = conn.execute(
+vampi-vulnerable  |              ^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+vampi-vulnerable  |     return meth(
+vampi-vulnerable  |            ^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+vampi-vulnerable  |     return connection._execute_clauseelement(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+vampi-vulnerable  |     ret = self._execute_context(
+vampi-vulnerable  |           ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+vampi-vulnerable  |     return self._exec_single_context(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+vampi-vulnerable  |     self._handle_dbapi_exception(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+vampi-vulnerable  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near "AND": syntax error
+vampi-vulnerable  | [SQL: SELECT * FROM users WHERE username = 'name1'+AND+'1'='1']
+vampi-vulnerable  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1%22+AND+%221%22%3D%221 HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[35m[1mGET /users/v1/name1'+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 500 -
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlite3.OperationalError: near "UNION": syntax error
+vampi-vulnerable  | 
+vampi-vulnerable  | The above exception was the direct cause of the following exception:
+vampi-vulnerable  | 
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+vampi-vulnerable  |     return self.wsgi_app(environ, start_response)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+vampi-vulnerable  |     response = self.handle_exception(e)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+vampi-vulnerable  |     response = self.full_dispatch_request()
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+vampi-vulnerable  |     rv = self.handle_user_exception(e)
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+vampi-vulnerable  |     rv = self.dispatch_request()
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+vampi-vulnerable  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+vampi-vulnerable  |     return function(request)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+vampi-vulnerable  |     return function(**kwargs)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+vampi-vulnerable  |     if User.get_user(username):
+vampi-vulnerable  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/models/user_model.py", line 73, in get_user
+vampi-vulnerable  |     query = db.session.execute(text(user_query))
+vampi-vulnerable  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+vampi-vulnerable  |     return self._proxied.execute(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+vampi-vulnerable  |     return self._execute_internal(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+vampi-vulnerable  |     result = conn.execute(
+vampi-vulnerable  |              ^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+vampi-vulnerable  |     return meth(
+vampi-vulnerable  |            ^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+vampi-vulnerable  |     return connection._execute_clauseelement(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+vampi-vulnerable  |     ret = self._execute_context(
+vampi-vulnerable  |           ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+vampi-vulnerable  |     return self._exec_single_context(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+vampi-vulnerable  |     self._handle_dbapi_exception(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+vampi-vulnerable  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near "UNION": syntax error
+vampi-vulnerable  | [SQL: SELECT * FROM users WHERE username = 'name1'+UNION+ALL+select+NULL+--+']
+vampi-vulnerable  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1%22+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[33mGET /users/v1/name1)+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 404 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/login HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "[35m[1mGET /users/v1/name1')+UNION+ALL+select+NULL+--+ HTTP/1.1[0m" 500 -
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlite3.OperationalError: near ")": syntax error
+vampi-vulnerable  | 
+vampi-vulnerable  | The above exception was the direct cause of the following exception:
+vampi-vulnerable  | 
+vampi-vulnerable  | Traceback (most recent call last):
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+vampi-vulnerable  |     return self.wsgi_app(environ, start_response)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+vampi-vulnerable  |     response = self.handle_exception(e)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+vampi-vulnerable  |     response = self.full_dispatch_request()
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+vampi-vulnerable  |     rv = self.handle_user_exception(e)
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+vampi-vulnerable  |     rv = self.dispatch_request()
+vampi-vulnerable  |          ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+vampi-vulnerable  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+vampi-vulnerable  |     response = function(request)
+vampi-vulnerable  |                ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+vampi-vulnerable  |     return function(request)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+vampi-vulnerable  |     return function(**kwargs)
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+vampi-vulnerable  |     if User.get_user(username):
+vampi-vulnerable  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/vampi/models/user_model.py", line 73, in get_user
+vampi-vulnerable  |     query = db.session.execute(text(user_query))
+vampi-vulnerable  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+vampi-vulnerable  |     return self._proxied.execute(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+vampi-vulnerable  |     return self._execute_internal(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+vampi-vulnerable  |     result = conn.execute(
+vampi-vulnerable  |              ^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+vampi-vulnerable  |     return meth(
+vampi-vulnerable  |            ^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+vampi-vulnerable  |     return connection._execute_clauseelement(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+vampi-vulnerable  |     ret = self._execute_context(
+vampi-vulnerable  |           ^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+vampi-vulnerable  |     return self._exec_single_context(
+vampi-vulnerable  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+vampi-vulnerable  |     self._handle_dbapi_exception(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+vampi-vulnerable  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+vampi-vulnerable  |     self.dialect.do_execute(
+vampi-vulnerable  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+vampi-vulnerable  |     cursor.execute(statement, parameters)
+vampi-vulnerable  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near ")": syntax error
+vampi-vulnerable  | [SQL: SELECT * FROM users WHERE username = 'name1')+UNION+ALL+select+NULL+--+']
+vampi-vulnerable  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "GET /users/v1/name1 HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
+vampi-vulnerable  | 172.18.0.1 - - [01/Jun/2026 04:23:30] "POST /users/v1/register HTTP/1.1" 200 -
