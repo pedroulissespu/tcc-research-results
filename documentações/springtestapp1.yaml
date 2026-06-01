@@ -1,0 +1,417 @@
+openapi: 3.0.3
+info:
+  title: Product Inventory API
+  description: CRUD REST API for managing product inventory with SKUs
+  version: 1.0.0
+  contact:
+    name: dimmskii
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+
+tags:
+  - name: Products
+    description: Product inventory management
+
+paths:
+  /api/products:
+    get:
+      tags:
+        - Products
+      summary: List all products
+      description: Returns a paginated list of all products in the inventory
+      operationId: listProducts
+      parameters:
+        - name: page
+          in: query
+          description: Page number (zero-based)
+          required: false
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+        - name: size
+          in: query
+          description: Number of items per page
+          required: false
+          schema:
+            type: integer
+            default: 20
+            minimum: 1
+            maximum: 100
+        - name: sortBy
+          in: query
+          description: Field to sort by
+          required: false
+          schema:
+            type: string
+            default: name
+            enum:
+              - name
+              - sku
+              - price
+              - quantity
+              - createdAt
+        - name: direction
+          in: query
+          description: Sort direction
+          required: false
+          schema:
+            type: string
+            default: asc
+            enum:
+              - asc
+              - desc
+      responses:
+        '200':
+          description: Successfully retrieved product list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductPage'
+
+    post:
+      tags:
+        - Products
+      summary: Create a new product
+      description: Adds a new product to the inventory
+      operationId: createProduct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductRequest'
+      responses:
+        '201':
+          description: Product created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Product with this SKU already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/products/{productId}:
+    get:
+      tags:
+        - Products
+      summary: Get a product by ID
+      description: Returns a single product by its ID
+      operationId: getProductById
+      parameters:
+        - $ref: '#/components/parameters/ProductId'
+      responses:
+        '200':
+          description: Successfully retrieved product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    put:
+      tags:
+        - Products
+      summary: Update a product
+      description: Updates an existing product by its ID
+      operationId: updateProduct
+      parameters:
+        - $ref: '#/components/parameters/ProductId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductRequest'
+      responses:
+        '200':
+          description: Product updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Product with this SKU already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    delete:
+      tags:
+        - Products
+      summary: Delete a product
+      description: Removes a product from the inventory
+      operationId: deleteProduct
+      parameters:
+        - $ref: '#/components/parameters/ProductId'
+      responses:
+        '204':
+          description: Product deleted successfully
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/products/sku/{sku}:
+    get:
+      tags:
+        - Products
+      summary: Get a product by SKU
+      description: Returns a single product by its SKU code
+      operationId: getProductBySku
+      parameters:
+        - $ref: '#/components/parameters/Sku'
+      responses:
+        '200':
+          description: Successfully retrieved product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/products/{productId}/stock:
+    patch:
+      tags:
+        - Products
+      summary: Update product stock quantity
+      description: Adjusts the stock quantity for a product (positive to add, negative to remove)
+      operationId: updateStock
+      parameters:
+        - $ref: '#/components/parameters/ProductId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StockUpdateRequest'
+      responses:
+        '200':
+          description: Stock updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '400':
+          description: Invalid stock adjustment (e.g. resulting quantity would be negative)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  parameters:
+    ProductId:
+      name: productId
+      in: path
+      description: Unique product identifier
+      required: true
+      schema:
+        type: integer
+        format: int64
+
+    Sku:
+      name: sku
+      in: path
+      description: Stock Keeping Unit code
+      required: true
+      schema:
+        type: string
+
+  schemas:
+    ProductRequest:
+      type: object
+      description: Request body for creating or updating a product
+      required:
+        - name
+        - sku
+        - price
+        - quantity
+      properties:
+        name:
+          type: string
+          description: Product name
+          minLength: 1
+          maxLength: 255
+          example: Wireless Bluetooth Headphones
+        sku:
+          type: string
+          description: Stock Keeping Unit - unique product identifier code
+          pattern: '^[A-Z0-9\-]{3,50}$'
+          minLength: 3
+          maxLength: 50
+          example: WBH-1001
+        description:
+          type: string
+          description: Product description
+          maxLength: 2000
+          example: High-quality over-ear wireless headphones with noise cancellation
+        price:
+          type: number
+          format: double
+          description: Unit price
+          minimum: 0
+          example: 79.99
+        quantity:
+          type: integer
+          format: int32
+          description: Stock quantity on hand
+          minimum: 0
+          example: 150
+        category:
+          type: string
+          description: Product category
+          maxLength: 100
+          example: Electronics
+
+    Product:
+      type: object
+      description: A product in the inventory
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Unique product identifier
+          readOnly: true
+          example: 1
+        name:
+          type: string
+          description: Product name
+          example: Wireless Bluetooth Headphones
+        sku:
+          type: string
+          description: Stock Keeping Unit - unique product identifier code
+          example: WBH-1001
+        description:
+          type: string
+          description: Product description
+          example: High-quality over-ear wireless headphones with noise cancellation
+        price:
+          type: number
+          format: double
+          description: Unit price
+          example: 79.99
+        quantity:
+          type: integer
+          format: int32
+          description: Stock quantity on hand
+          example: 150
+        category:
+          type: string
+          description: Product category
+          example: Electronics
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp when the product was created
+          readOnly: true
+          example: '2025-01-15T10:30:00Z'
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp when the product was last updated
+          readOnly: true
+          example: '2025-01-15T12:00:00Z'
+
+    StockUpdateRequest:
+      type: object
+      description: Request body for adjusting stock quantity
+      required:
+        - adjustment
+      properties:
+        adjustment:
+          type: integer
+          format: int32
+          description: Quantity adjustment (positive to add stock, negative to remove)
+          example: 25
+
+    ProductPage:
+      type: object
+      description: Paginated list of products
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        page:
+          type: integer
+          description: Current page number (zero-based)
+          example: 0
+        size:
+          type: integer
+          description: Number of items per page
+          example: 20
+        totalElements:
+          type: integer
+          format: int64
+          description: Total number of products
+          example: 54
+        totalPages:
+          type: integer
+          description: Total number of pages
+          example: 3
+
+    ErrorResponse:
+      type: object
+      description: Standard error response
+      properties:
+        status:
+          type: integer
+          description: HTTP status code
+          example: 404
+        error:
+          type: string
+          description: Error type
+          example: Not Found
+        message:
+          type: string
+          description: Human-readable error message
+          example: Product with id 42 not found
+        timestamp:
+          type: string
+          format: date-time
+          description: When the error occurred
+          example: '2025-01-15T10:30:00Z'
