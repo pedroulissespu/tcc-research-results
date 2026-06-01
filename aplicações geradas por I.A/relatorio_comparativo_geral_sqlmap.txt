@@ -1,0 +1,209 @@
+================================================================================
+  RELATÓRIO COMPARATIVO - SQL Injection por Configuração
+  Data: 2026-05-31 22:33:54
+  Base URL: http://localhost:8000
+================================================================================
+
+  Configuração                                        Vulns  Erros       Status
+  -------------------------------------------------- ------ ------ ------------
+  com_framework_com_orm_com_sanitizacao                   6      0   VULNERÁVEL
+  com_framework_com_orm_sem_sanitizacao                   6      0   VULNERÁVEL
+  com_framework_sem_orm_com_sanitizacao                   6      0   VULNERÁVEL
+  com_framework_sem_orm_sem_sanitizacao                   6      0   VULNERÁVEL
+  sem_framework_com_orm_com_sanitizacao                   6      1   VULNERÁVEL
+  sem_framework_com_orm_sem_sanitizacao                   6      1   VULNERÁVEL
+  sem_framework_sem_orm_com_sanitizacao                   6      1   VULNERÁVEL
+  sem_framework_sem_orm_sem_sanitizacao                   6      0   VULNERÁVEL
+
+================================================================================
+  DETALHES POR CONFIGURAÇÃO
+================================================================================
+
+  >> com_framework_com_orm_com_sanitizacao
+     COM FRAMEWORK | COM ORM | COM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> SQL Injection confirmada
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\com_framework_com_orm_com_sanitizacao\resultado_20260531_222229.txt
+
+  >> com_framework_com_orm_sem_sanitizacao
+     COM FRAMEWORK | COM ORM | SEM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> SQL Injection confirmada
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\com_framework_com_orm_sem_sanitizacao\resultado_20260531_222358.txt
+
+  >> com_framework_sem_orm_com_sanitizacao
+     COM FRAMEWORK | SEM ORM | COM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\com_framework_sem_orm_com_sanitizacao\resultado_20260531_222436.txt
+
+  >> com_framework_sem_orm_sem_sanitizacao
+     COM FRAMEWORK | SEM ORM | SEM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\com_framework_sem_orm_sem_sanitizacao\resultado_20260531_222524.txt
+
+  >> sem_framework_com_orm_com_sanitizacao
+     SEM FRAMEWORK | COM ORM | COM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> SQL Injection confirmada
+     Erros (1):
+       - [GET] /usuarios/1: Erro de conexão - servidor pode estar offline
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\sem_framework_com_orm_com_sanitizacao\resultado_20260531_222614.txt
+
+  >> sem_framework_com_orm_sem_sanitizacao
+     SEM FRAMEWORK | COM ORM | SEM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> SQL Injection confirmada
+     Erros (1):
+       - [GET] /produtos/busca/: Erro de conexão - servidor pode estar offline
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\sem_framework_com_orm_sem_sanitizacao\resultado_20260531_222808.txt
+
+  >> sem_framework_sem_orm_com_sanitizacao
+     SEM FRAMEWORK | SEM ORM | COM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+     Erros (1):
+       - [POST] /usuarios: Erro de conexão - servidor pode estar offline
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\sem_framework_sem_orm_com_sanitizacao\resultado_20260531_223157.txt
+
+  >> sem_framework_sem_orm_sem_sanitizacao
+     SEM FRAMEWORK | SEM ORM | SEM SANITIZACAO
+     Vulnerabilidades (6):
+       - [GET] /usuarios (usuarios_listar)
+         -> SQL Injection confirmada
+       - [GET] /usuarios/busca/ (usuarios_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos (produtos_listar)
+         -> SQL Injection confirmada
+       - [GET] /produtos/busca/ (produtos_busca_nome)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+       - [GET] /produtos/busca/ (produtos_busca_nome_categoria)
+         -> Parâmetro vulnerável detectado
+         -> SQL Injection confirmada
+         -> DBMS identificado
+     Log: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\sem_framework_sem_orm_sem_sanitizacao\resultado_20260531_223337.txt
+
+================================================================================
+  ANÁLISE COMPARATIVA
+================================================================================
+
+  Média de vulnerabilidades por categoria:
+    com_framework            : 24 total (6.0 média por config)
+    sem_framework            : 24 total (6.0 média por config)
+    com_orm                  : 24 total (6.0 média por config)
+    sem_orm                  : 24 total (6.0 média por config)
+    com_sanitizacao          : 24 total (6.0 média por config)
+    sem_sanitizacao          : 24 total (6.0 média por config)
+
+  Relatório salvo em: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\catalogo_sqlmap_logs\relatorio_comparativo_20260531_223354.txt
+================================================================================

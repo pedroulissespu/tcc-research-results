@@ -1,0 +1,12 @@
+Check Django models
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, crapi, db, sessions
+Running migrations:
+  No migrations to apply.
+System check identified no issues (0 silenced).
+DatabaseBackend          ... working
+Seeding the database
+Starting Django server
+TLS is ENABLED
+TLS_CERTIFICATE: certs/server.crt
+TLS_KEY: certs/server.key

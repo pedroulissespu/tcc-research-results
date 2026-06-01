@@ -1,0 +1,4 @@
+Starting Flask server
+TLS is ENABLED
+TLS_CERTIFICATE: /app/certs/server.crt
+TLS_KEY: /app/certs/server.key

